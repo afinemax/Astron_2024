@@ -11,7 +11,7 @@ Important scripts, notebooks, notes, and flow charts + any presentations for my 
 
 * [example_pipeline_h5_output](https://github.com/afinemax/Astron_2024/tree/main/example_pipeline__h5_output) contains a notebook that opens a `.h5` file, makes a waterfall plot for practice. Using a `.h5` file made from the pipeline
 * [frb_example_data_june_2024](https://github.com/afinemax/Astron_2024/tree/main/frb_example_data_june_2024) contains a notebook making a waterfile plot from CHIME data stored as `~.npy` files
-
+* [noise_channels](https://github.com/afinemax/Astron_2024/tree/main/noise_channels) contains a notebook that looks at past observations taken and calculutes bad frequency channels to mask
 ## Roadmap 
 
 - [x] Understand how FRB signals from space turn into dynamic spectra (i.e., how telescopes record data and how analysis pipelines work). See [flowchart](https://github.com/afinemax/Astron_2024/blob/main/flow_charts/frb_to_dynamic_spectra.pdf).
@@ -27,6 +27,10 @@ Important scripts, notebooks, notes, and flow charts + any presentations for my 
   - [ ] Modify the `start_frb.sh` script to record observations on the Uranus & Mercurius computers.
 
 - [ ] Learn how [Fetch](https://github.com/devanshkv/fetch) and [TransientX](https://github.com/ypmen/TransientX) work, and implement them into the pipeline.
+
+- [ ] Understand what Burst Parameters we can observe & measure directly, and which ones we can infer
+
+- [ ] Understand how to use [fitburst](https://github.com/CHIMEFRB/fitburst)
 
 - [ ] Observe FRBs, but more likely pulsars.
 
