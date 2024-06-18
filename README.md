@@ -23,7 +23,7 @@ Important scripts, notebooks, notes, and flow charts + any presentations for my 
 
 - [ ] learn how [Fetch](https://github.com/devanshkv/fetch) & [Transientx](https://github.com/ypmen/TransientX) work, implement into pipeline
 
-- [] Observe FRBs, but more likely pulsars 
+- [ ] Observe FRBs, but more likely pulsars 
 
 - And beyond!
 
