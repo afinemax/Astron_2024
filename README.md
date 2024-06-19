@@ -24,7 +24,7 @@ Important scripts, notebooks, notes, and flow charts + any presentations for my 
 - [x] Learn how the current pipeline works (`check_frb.py`). See [flowchart](https://github.com/afinemax/Astron_2024/blob/main/flow_charts/fil_to_dynamic_spectra.pdf).
   - The pipeline GitLab repo is [here](https://gitlab.camras.nl/dijkema/frbscripts).
   - [ ] Create a file of known bad frequency channels from observed data to mask out using the `-ignorechan` option in the pipeline.
-  - [ ] Modify the 'start_frb.sh' & 'check_frb.py' scripts to load in a catalog file instead of using hardcoded known sources
+  - [ ] Modify the `start_frb.sh` & `check_frb.py` scripts to load in a catalog file instead of using hardcoded known sources
   - [ ] Modify the `start_frb.sh` script to record observations on the Uranus & Mercurius computers.
 
 - [ ] Learn how [Fetch](https://github.com/devanshkv/fetch) and [TransientX](https://github.com/ypmen/TransientX) work, and implement them into the pipeline.
