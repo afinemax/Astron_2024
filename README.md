@@ -32,6 +32,15 @@ Important scripts, notebooks, notes, and flow charts + any presentations for my 
 - [ ] Understand what Burst Parameters we can observe & measure directly, and which ones we can infer
 
 - [ ] Understand how to use [fitburst](https://github.com/CHIMEFRB/fitburst)
+  - [ ] Try using [fitburst](https://github.com/CHIMEFRB/fitburst) on the CHIME data I have
+
+- [ ] Try a Clustering algorithim for candidiates? Look inot DM scan
+
+- [ ] Test pipeline on Crab or Pulsar and see how many Bursts we recover vs miss
+
+- [ ] Injection Testing the pipeline 
+
+- [ ] Try combining data with those from other telescopes to measure fringes / localization
 
 - [ ] Observe FRBs, but more likely pulsars.
 
