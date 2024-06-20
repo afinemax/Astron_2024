@@ -17,3 +17,9 @@ docker run -it --name noise_new_channels \
   c7897abba927 /bin/bash
   
 # this is docker +x11 forwarding
+
+ssh camrasdemo "find /media/camrasdemo/3*/ -name '*.mask'" > files_to_copy.txt
+# makes list of files on my local machine in the .txt file
+
+# rsync -avz --include '*/' --include '*.mask' --exclude '*' camrasdemo:/media/camrasdemo/3f3a1b8a-f7dc-4dad-97f4-7b3f0ffa6cbf/ .
+# copies
