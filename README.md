@@ -23,18 +23,23 @@ Important scripts, notebooks, notes, and flow charts + any presentations for my 
 
 - [x] Learn how the current pipeline works (`check_frb.py`). See [flowchart](https://github.com/afinemax/Astron_2024/blob/main/flow_charts/fil_to_dynamic_spectra.pdf).
   - The pipeline GitLab repo is [here](https://gitlab.camras.nl/dijkema/frbscripts).
-  - [ ] Create a file of known bad frequency channels from observed data to mask out using the `-ignorechan` option in the pipeline.
-  - [ ] Modify the `start_frb.sh` & `check_frb.py` scripts to load in a catalog file instead of using hardcoded known sources
+  - My version of of the pipeline is [here](https://github.com/afinemax/frbscripts)
+  - [x] Create a file of known bad frequency channels from observed data to mask out using the `-ignorechan` option in the pipeline.
+  - [x] Modify the `start_frb.sh` & `check_frb.py` scripts to load in a catalog file instead of using hardcoded known sources
   - [ ] Modify the `start_frb.sh` script to record observations on the Uranus & Mercurius computers.
 
-- [ ] Learn how [Fetch](https://github.com/devanshkv/fetch) and [TransientX](https://github.com/ypmen/TransientX) work, and implement them into the pipeline.
+- [x] Learn how [Fetch](https://github.com/devanshkv/fetch) works and implement into the pipeline.
+	- Fetch is already installed and working on uranus!
+ 
+- [x] Learn how [TransientX](https://github.com/ypmen/TransientX) works
+	- [ ] implement them into the pipeline.
 
 - [ ] Understand what Burst Parameters we can observe & measure directly, and which ones we can infer
 
 - [ ] Understand how to use [fitburst](https://github.com/CHIMEFRB/fitburst)
   - [ ] Try using [fitburst](https://github.com/CHIMEFRB/fitburst) on the CHIME data I have
 
-- [ ] Try a Clustering algorithim for candidiates? Look into DM scan
+- [ ] Try a Clustering algorithim for candidiates? Look into Db scan
 
 - [ ] Test pipeline on Crab or Pulsar and see how many Bursts we recover vs miss
 
