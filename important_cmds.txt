@@ -23,3 +23,23 @@ ssh camrasdemo "find /media/camrasdemo/3*/ -name '*.mask'" > files_to_copy.txt
 
 # rsync -avz --include '*/' --include '*.mask' --exclude '*' camrasdemo:/media/camrasdemo/3f3a1b8a-f7dc-4dad-97f4-7b3f0ffa6cbf/ .
 # copies
+
+
+# become frb user on uranus
+# sudo -u frb -i 
+
+
+scp -r camrasdemo@mercurius:/media/camrasdemo/3f3a1b8a-f7dc-4dad-97f4-7b3f0ffa6cbf /data_tmp/delete_me_max
+
+# copy data dir files from merc to uranus to make the .weights with
+
+
+
+# du -sh /path/to/directory
+
+# list out how big the dirctory is in storage
+
+
+screen #cmd here
+# then press crtl +a, this runs a terminal session that still runs when you leave!
+# screen ls to list screens and screen -r to reattach -S to name screen when making
