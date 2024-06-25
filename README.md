@@ -34,7 +34,7 @@ Important scripts, notebooks, notes, and flow charts + any presentations for my 
 - [ ] Understand how to use [fitburst](https://github.com/CHIMEFRB/fitburst)
   - [ ] Try using [fitburst](https://github.com/CHIMEFRB/fitburst) on the CHIME data I have
 
-- [ ] Try a Clustering algorithim for candidiates? Look inot DM scan
+- [ ] Try a Clustering algorithim for candidiates? Look into DM scan
 
 - [ ] Test pipeline on Crab or Pulsar and see how many Bursts we recover vs miss
 
