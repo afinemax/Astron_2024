@@ -3,7 +3,9 @@
 ## Advisors: Dr. Tammo Jan Dijkema & Co-advisor Proffesor Jason Hessels
 In summer 2024, I am a researcher at The Netherlands Institute for Radio Astronomy (ASTRON) with their Summer Research Programme. For my project, I will be using and operating the 25-m Dwingeloo radio telescope. I will study bright repeating Fast Radio Bursts (FRBs) to understand the potential connections between repeating and apparently non-repeating FRBs. As FRBs are hard to catch, I will also observe pulsars to both test the methodology and learn the relevant techniques.
 
+![Max Fine Observing with the 25-m Dwingeloo Radio Telescope](https://afinemax.github.io/afinemax1/images/max_25m_2.jpg)
 
+![Diagnostic Plot of a possible detection of FRB20240209A Observed on June 26 2024 by Max Fine](https://afinemax.github.io/afinemax1/images/FRB20240209A_L1_Band_2024_06_26_10_33_18_tcand_297.8789500_dm_183.0_snr_6.1bandpass_corr.png>
 
 
 ### This repo contains:
@@ -11,7 +13,7 @@ Important scripts, notebooks, notes, and flow charts + any presentations for my 
 
 * [example_pipeline_h5_output](https://github.com/afinemax/Astron_2024/tree/main/example_pipeline__h5_output) contains a notebook that opens a `.h5` file, makes a waterfall plot for practice. Using a `.h5` file made from the pipeline
 * [frb_example_data_june_2024](https://github.com/afinemax/Astron_2024/tree/main/frb_example_data_june_2024) contains a notebook making a waterfile plot from CHIME data stored as `.npy` files
-* [noise_channels](https://github.com/afinemax/Astron_2024/tree/main/noise_channels) contains a notebook that looks at past observations taken and calculutes bad frequency channels to mask
+* [noise_channels](https://github.com/afinemax/Astron_2024/tree/main/noise_channels) contains several notebooks, and a script that looks at past observations taken and calculutes bad frequency channels to mask
 ## Roadmap 
 
 - [x] Understand how FRB signals from space turn into dynamic spectra (i.e., how telescopes record data and how analysis pipelines work). See [flowchart](https://github.com/afinemax/Astron_2024/blob/main/flow_charts/frb_to_dynamic_spectra.pdf).
@@ -47,7 +49,8 @@ Important scripts, notebooks, notes, and flow charts + any presentations for my 
 
 - [ ] Try combining data with those from other telescopes to measure fringes / localization
 
-- [ ] Observe FRBs, but more likely pulsars.
+- [x] Observe FRBs, but more likely pulsars.
+	- Observing repeating FRB20240209A which is active see [ATel#16670 by Vishwangi Shah (McGill University) on behalf of the CHIME/FRB Collaboration](https://www.astronomerstelegram.org/?read=16670)
 
 - And beyond!
 
