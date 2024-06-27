@@ -9,6 +9,19 @@ This is me inside the control room, observing with the 25-m Dwingeloo Radio Tele
 This is a diagnostic plot showing the dynamic spectrum, and some meta data of possible detection of FRB20240209A Observed on June 26 2024
 ![Diagnostic Plot of a possible detection of FRB20240209A Observed on June 26 2024 by Max Fine](https://afinemax.github.io/afinemax1/images/FRB20240209A_L1_Band_2024_06_26_10_33_18_tcand_297.8789500_dm_183.0_snr_6.1bandpass_corr.png)
 
+<div style="display: flex; justify-content: space-around;">
+
+<div style="text-align: center;">
+  <p>This is me inside the control room, observing with the 25-m Dwingeloo Radio Telescope.</p>
+  <img src="https://afinemax.github.io/afinemax1/images/max_25m_2.jpg" alt="Max Fine Observing with the 25-m Dwingeloo Radio Telescope" width="45%">
+</div>
+
+<div style="text-align: center;">
+  <p>This is a diagnostic plot showing the dynamic spectrum, and some meta data of possible detection of FRB20240209A Observed on June 26 2024</p>
+  <img src="https://afinemax.github.io/afinemax1/images/FRB20240209A_L1_Band_2024_06_26_10_33_18_tcand_297.8789500_dm_183.0_snr_6.1bandpass_corr.png" alt="Diagnostic Plot of a possible detection of FRB20240209A Observed on June 26 2024 by Max Fine" width="45%">
+</div>
+
+</div>
 
 
 ### This repo contains:
