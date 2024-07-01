@@ -61,7 +61,10 @@ Important scripts, notebooks, notes, and flow charts + any presentations for my 
 	- Awaiting on help from Paul & CAMRAS for cables connecting Uranus to Mercurius
   - [ ] Implement [TransientX](https://github.com/ypmen/TransientX) into the pipeline.
 	- Waiting for it to be installed on Uranus
-  - [ ] look into making simulated, injecting simulations into `.fill` files for testing
+  - [x] compare pipeline outputs when using the `--ignorechan` flag
+  - [x] look into making simulated, injecting simulations into `.fill` files for testing
+	- `fitburst' has a cool `simulate_burst.py` script that can simulate dedisperesed or disperesed dynamic spectrums, not sure how to inject those into `.fil` files
+	- [will](https://github.com/josephwkania/will/tree/master) is a simulator that can be used to inject (and extract!) simulated pulses into '.fil' files! 
   - [x] Observe FRBs, and likely pulsars. Observing repeating FRB20240209A. See [ATel#16670 by Vishwangi Shah (McGill University) on behalf of the CHIME/FRB Collaboration](https://www.astronomerstelegram.org/?read=16670).
 
 </details>
@@ -71,6 +74,9 @@ Important scripts, notebooks, notes, and flow charts + any presentations for my 
  <summary><strong> To Do</strong></summary>
 
  - [ ] Fill in black boxes in the flowcharts.
+	- look into how `presto` actually removes RFI, and finds pulses
+        - look it how candidates are extracted from the `.fil` file
+ - [ ] maybe make `.h5` files with full resolution instead of modified for fetch
  - [ ] Try a clustering algorithm for candidates (e.g., DBSCAN).
  - [ ] Injection Testing the pipeline.
  - [ ] Test the pipeline on Crab or Pulsar and compare the number of recovered vs. missed bursts.
