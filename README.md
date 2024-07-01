@@ -2,7 +2,7 @@
 # Hunting for Fast Radio Bursts (FRBs) with the 25-m Dwingeloo radio telescope at ASTRON, the Netherlands 🇳🇱 📡
 ## Advisors: Dr. Tammo Jan Dijkema & Co-advisor Proffesor Jason Hessels
 
-> "We look to the stars, but all we find is RFI."
+> "We look to the stars, but all we find is RFI." - Unkown Radio Astronomer
 
 In summer 2024, I am a researcher at The Netherlands Institute for Radio Astronomy (ASTRON) with their Summer Research Programme. For my project, I will be using and operating the 25-m Dwingeloo radio telescope. I will study bright repeating Fast Radio Bursts (FRBs) to understand the potential connections between repeating and apparently non-repeating FRBs. As FRBs are hard to catch, I will also observe pulsars to both test the methodology and learn the relevant techniques.
 
@@ -23,7 +23,7 @@ This is me inside the control room, observing with the 25-m Dwingeloo Radio Tele
 Important scripts, notebooks, notes, and flow charts + any presentations for my summer research. 
 
 * [example_pipeline_h5_output](https://github.com/afinemax/Astron_2024/tree/main/example_pipeline__h5_output) contains a notebook that opens a `.h5` file, makes a waterfall plot for practice. Using a `.h5` file made from the pipeline
-* [frb_example_data_june_2024](https://github.com/afinemax/Astron_2024/tree/main/frb_example_data_june_2024) contains a notebook making a waterfile plot from CHIME data stored as `.npy` files
+* [frb_example_data_june_2024](https://github.com/afinemax/Astron_2024/tree/main/frb_example_data_june_2024) contains a notebook making waterfall plots from CHIME `.npy` files, and two notebooks trying out `fitburst` on CHIME data, a simulation and a possible detection of an FRB
 * [noise_channels](https://github.com/afinemax/Astron_2024/tree/main/noise_channels) contains several notebooks, and a script that looks at past observations taken and calculutes bad frequency channels to mask
 
 ## Roadmap
@@ -45,6 +45,10 @@ Important scripts, notebooks, notes, and flow charts + any presentations for my 
   - [x] Learn how [Fetch](https://github.com/devanshkv/fetch) works and implement it into the pipeline.
     - Fetch is installed and working on Uranus!
   - [x] Learn how [TransientX](https://github.com/ypmen/TransientX) works.
+  - [x] Understand what Burst Parameters can be observed & measured directly, and which ones can be inferred.
+	- list out model componets from FITBURST, polarization, fluence  etc
+  - [x] Understand how to use [fitburst](https://github.com/CHIMEFRB/fitburst).
+  - [x] Try using `fitburst` on the CHIME data I have, simulated data, and my possible detection of FRB20240209A
 
 </details>
  
@@ -54,10 +58,10 @@ Important scripts, notebooks, notes, and flow charts + any presentations for my 
    <summary><strong> In Progress</strong></summary>
 
   - [ ] Modify the `start_frb.sh` script to record observations on Uranus & Mercurius computers.
+	- Awaiting on help from Paul & CAMRAS for cables connecting Uranus to Mercurius
   - [ ] Implement [TransientX](https://github.com/ypmen/TransientX) into the pipeline.
-  - [ ] Understand what Burst Parameters can be observed & measured directly, and which ones can be inferred.
-  - [ ] Understand how to use [fitburst](https://github.com/CHIMEFRB/fitburst).
-  - [ ] Try using `fitburst` on the CHIME data I have.
+	- Waiting for it to be installed on Uranus
+  - [ ] look into making simulated, injecting simulations into `.fill` files for testing
   - [x] Observe FRBs, and likely pulsars. Observing repeating FRB20240209A. See [ATel#16670 by Vishwangi Shah (McGill University) on behalf of the CHIME/FRB Collaboration](https://www.astronomerstelegram.org/?read=16670).
 
 </details>
