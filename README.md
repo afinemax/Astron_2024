@@ -26,14 +26,15 @@ Important scripts, notebooks, notes, and flow charts + any presentations for my 
 * [frb_example_data_june_2024](https://github.com/afinemax/Astron_2024/tree/main/frb_example_data_june_2024) contains a notebook making waterfall plots from CHIME `.npy` files, and two notebooks trying out `fitburst` on CHIME data, a simulation and a possible detection of an FRB
 * [noise_channels](https://github.com/afinemax/Astron_2024/tree/main/noise_channels) contains several notebooks, and a script that looks at past observations taken and calculutes bad frequency channels to mask
 
-## Roadmap
-
+## Big Picture Outline
+- will fill in this week
 
 ## TODO list
 
 <details>
-  <summary><strong>Completed Tasks</strong></summary>
+  <summary><strong>Tasks:</strong></summary>
 
+  ### Completed
   - [x] Understand how FRB signals from space turn into dynamic spectra. See [flowchart](https://github.com/afinemax/Astron_2024/blob/main/flow_charts/frb_to_dynamic_spectra.pdf).
   - [x] Learn how to operate the 25-m Dwingeloo Radio Telescope.
   - [x] Learn how to use [Presto](https://github.com/scottransom/presto) for single pulse searches and RFI removal.
@@ -46,43 +47,32 @@ Important scripts, notebooks, notes, and flow charts + any presentations for my 
     - Fetch is installed and working on Uranus!
   - [x] Learn how [TransientX](https://github.com/ypmen/TransientX) works.
   - [x] Understand what Burst Parameters can be observed & measured directly, and which ones can be inferred.
-	- list out model componets from FITBURST, polarization, fluence  etc
+	- List out model components from FITBURST, polarization, fluence, etc.
   - [x] Understand how to use [fitburst](https://github.com/CHIMEFRB/fitburst).
-  - [x] Try using `fitburst` on the CHIME data I have, simulated data, and my possible detection of FRB20240209A
+  - [x] Try using `fitburst` on the CHIME data I have, simulated data, and my possible detection of FRB20240209A.
 
-</details>
- 
-
-
-<details>
-   <summary><strong> In Progress</strong></summary>
-
+  ### In Progress
   - [ ] Modify the `start_frb.sh` script to record observations on Uranus & Mercurius computers.
-	- Awaiting on help from Paul & CAMRAS for cables connecting Uranus to Mercurius
+	- Awaiting help from Paul & CAMRAS for cables connecting Uranus to Mercurius.
   - [ ] Implement [TransientX](https://github.com/ypmen/TransientX) into the pipeline.
-	- Waiting for it to be installed on Uranus
-  - [x] compare pipeline outputs when using the `--ignorechan` flag
-  - [x] look into making simulated, injecting simulations into `.fill` files for testing
-	- `fitburst' has a cool `simulate_burst.py` script that can simulate dedisperesed or disperesed dynamic spectrums, not sure how to inject those into `.fil` files
-	- [will](https://github.com/josephwkania/will/tree/master) is a simulator that can be used to inject (and extract!) simulated pulses into '.fil' files! 
+	- Waiting for it to be installed on Uranus.
+  - [x] Compare pipeline outputs when using the `--ignorechan` flag.
+  - [x] Look into making simulated, injecting simulations into `.fil` files for testing.
+	- `fitburst` has a cool `simulate_burst.py` script that can simulate dedispersed or dispersed dynamic spectrums, not sure how to inject those into `.fil` files.
+	- [will](https://github.com/josephwkania/will/tree/master) is a simulator that can be used to inject (and extract!) simulated pulses into `.fil` files!
   - [x] Observe FRBs, and likely pulsars. Observing repeating FRB20240209A. See [ATel#16670 by Vishwangi Shah (McGill University) on behalf of the CHIME/FRB Collaboration](https://www.astronomerstelegram.org/?read=16670).
 
+  ### To Do
+  - [ ] Fill in black boxes in the flowcharts.
+	- Look into how `presto` actually removes RFI and finds pulses.
+        - Look into how candidates are extracted from the `.fil` file.
+  - [ ] Maybe make `.h5` files with full resolution instead of modified for fetch.
+  - [ ] Try a clustering algorithm for candidates (e.g., DBSCAN).
+  - [ ] Injection testing the pipeline.
+  - [ ] Test the pipeline on Crab or Pulsar and compare the number of recovered vs. missed bursts.
+  - [ ] Combine data with other telescopes to measure fringes/localization.
 </details>
 
-
-<details>
- <summary><strong> To Do</strong></summary>
-
- - [ ] Fill in black boxes in the flowcharts.
-	- look into how `presto` actually removes RFI, and finds pulses
-        - look it how candidates are extracted from the `.fil` file
- - [ ] maybe make `.h5` files with full resolution instead of modified for fetch
- - [ ] Try a clustering algorithm for candidates (e.g., DBSCAN).
- - [ ] Injection Testing the pipeline.
- - [ ] Test the pipeline on Crab or Pulsar and compare the number of recovered vs. missed bursts.
- - [ ] Combine data with other telescopes to measure fringes/localization.
-
-</details>
 
 
 ## License
