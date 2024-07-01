@@ -1,0 +1,88 @@
+{
+    "initial_dm": 0,
+    "initial_time": 60487.35646990778,
+    "model_parameters": {
+        "amplitude": [
+            -3.271578285110666
+        ],
+        "arrival_time": [
+            0.026061410458247142
+        ],
+        "burst_width": [
+            0.004388063933354587
+        ],
+        "dm": [
+            -24.90747929480594
+        ],
+        "dm_index": [
+            -2
+        ],
+        "scattering_timescale": [
+            0
+        ],
+        "scattering_index": [
+            -4
+        ],
+        "spectral_index": [
+            -60.95165214563201
+        ],
+        "spectral_running": [
+            137.3560480946864
+        ],
+        "ref_freq": [
+            1250
+        ]
+    },
+    "fit_statistics": {
+        "num_freq": 256,
+        "num_freq_good": 256,
+        "num_fit_parameters": 6,
+        "num_observations": 65530,
+        "num_time": 256,
+        "chisq_initial": 65589.8515625,
+        "chisq_final": 65588.68532438025,
+        "chisq_final_reduced": 1.00089554897574,
+        "snr": 1.0799250528406872,
+        "bestfit_parameters": {
+            "amplitude": [
+                -3.271578285110666
+            ],
+            "arrival_time": [
+                0.026061410458247142
+            ],
+            "burst_width": [
+                0.004388063933354587
+            ],
+            "dm": [
+                -24.90747929480594
+            ],
+            "spectral_index": [
+                -60.95165214563201
+            ],
+            "spectral_running": [
+                137.3560480946864
+            ]
+        },
+        "bestfit_uncertainties": {
+            "amplitude": [
+                NaN
+            ],
+            "arrival_time": [
+                NaN
+            ],
+            "burst_width": [
+                0.005206937808559401
+            ],
+            "dm": [
+                NaN
+            ],
+            "spectral_index": [
+                NaN
+            ],
+            "spectral_running": [
+                NaN
+            ]
+        },
+        "bestfit_covariance": null
+    }
+}
