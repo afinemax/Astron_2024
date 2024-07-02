@@ -17,6 +17,17 @@
 
 ## SSH and File Management
 
+### Have SSH remember login password 
+
+`ssh-copy-id maxfine@access.camras.nl`
+- This moves your local ssh public key? to the host computer
+
+`~/.ssh/config`
+- location of ssh config file so you can do fancy graphic forwarding, always open a port, ssh nickname etc
+
+`jupyter-notebook --no-browser --port=8888 --ip=0.0.0.0`
+- portforward in my ssh config file, and run this command on host computer to start a jupyter-notebook session via ssh
+
 ### External Hard Drive Path
 
 `camrasdemo@mercurius:/media/camrasdemo/3f3a1b8a-f7dc-4dad-97f4-7b3f0ffa6cbf/2024-03-24$`
