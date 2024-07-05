@@ -1,8 +1,8 @@
 
-# Hunting for Fast Radio Bursts (FRBs) with the 25-m Dwingeloo radio telescope at ASTRON, the Netherlands 🇳🇱 📡
+# Hunting for Fast Radio Bursts (FRBs) with the 25-m Dwingeloo Radio Telescope (DRT) at ASTRON, the Netherlands 🇳🇱 📡
 ## Advisors: Dr. Tammo Jan Dijkema & Co-advisor Proffesor Jason Hessels
 
-> "We look to the stars, but all we find is RFI." - Unkown Radio Astronomer
+> "We look to the stars, but all we find is RFI." - Found on the back of a poster at ASTRON
 
 In summer 2024, I am a researcher at The Netherlands Institute for Radio Astronomy (ASTRON) with their Summer Research Programme. For my project, I will be using and operating the 25-m Dwingeloo radio telescope. I will study bright repeating Fast Radio Bursts (FRBs) to understand the potential connections between repeating and apparently non-repeating FRBs. As FRBs are hard to catch, I will also observe pulsars to both test the methodology and learn the relevant techniques.
 
@@ -27,7 +27,8 @@ Important scripts, notebooks, notes, and flow charts + any presentations for my 
 * [noise_channels](https://github.com/afinemax/Astron_2024/tree/main/noise_channels) contains several notebooks, and a script that looks at past observations taken and calculutes bad frequency channels to mask
 
 ## Big Picture Outline:
-- will fill in this week
+
+The Big Picture of my project is to learn & apply radio astronomy techniques for detecting FRBs. This entails understanding how the radio telescope turns radio signals into 'raw' data, and then how the 'raw' data is further reduced by a data pipeline. The data pipeline searchs for and cuts out Radio Frequency Interference (RFI), and searchs for possible extragalactic radio signals, at present this is done with the `presto` package.  Part of the Big Idea is to make a series of minor to moderate (or even major) improvements to the search pipeline. If I am very lucky, we will be able to detect a Repeating FRB over summer. However, in the more likely case we will be looking at a bright Pulsar to test as a final 'proof of concept' that the DRT can be used in dedicated campaigns to observe bright repeating FRBs.     
 
 ## TODO list:
 
@@ -61,13 +62,12 @@ Important scripts, notebooks, notes, and flow charts + any presentations for my 
 	- `fitburst` has a cool `simulate_burst.py` script that can simulate dedispersed or dispersed dynamic spectrums, not sure how to inject those into `.fil` files.
 	- [will](https://github.com/josephwkania/will/tree/master) is a simulator that can be used to inject (and extract!) simulated pulses into `.fil` files!
   - [x] Observe FRBs, and likely pulsars. Observing repeating FRB20240209A. See [ATel#16670 by Vishwangi Shah (McGill University) on behalf of the CHIME/FRB Collaboration](https://www.astronomerstelegram.org/?read=16670).
-
+  - [x] Try a clustering algorithm for reducing the total number of candidates (e.g. DBSCAN).
   ### To Do:
   - [ ] Fill in black boxes in the flowcharts.
 	- Look into how `presto` actually removes RFI and finds pulses.
         - Look into how candidates are extracted from the `.fil` file.
   - [ ] Maybe make `.h5` files with full resolution instead of modified for fetch.
-  - [ ] Try a clustering algorithm for candidates (e.g., DBSCAN).
   - [ ] Injection testing the pipeline.
   - [ ] Test the pipeline on Crab or Pulsar and compare the number of recovered vs. missed bursts.
   - [ ] Combine data with other telescopes to measure fringes/localization.

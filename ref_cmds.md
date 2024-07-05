@@ -28,6 +28,9 @@
 `jupyter-notebook --no-browser --port=8888 --ip=0.0.0.0`
 - portforward in my ssh config file, and run this command on host computer to start a jupyter-notebook session via ssh
 
+'ssh -N -f -L localhost:8888:localhost:8888 maxfine@uranus'
+- does the local portforwarding to the host computer
+
 ### External Hard Drive Path
 
 `camrasdemo@mercurius:/media/camrasdemo/3f3a1b8a-f7dc-4dad-97f4-7b3f0ffa6cbf/2024-03-24$`
