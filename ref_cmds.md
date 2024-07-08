@@ -28,7 +28,7 @@
 `jupyter-notebook --no-browser --port=8888 --ip=0.0.0.0`
 - portforward in my ssh config file, and run this command on host computer to start a jupyter-notebook session via ssh
 
-'ssh -N -f -L localhost:8888:localhost:8888 maxfine@uranus'
+`ssh -N -f -L localhost:8888:localhost:8888 maxfine@uranus`
 - does the local portforwarding to the host computer
 
 ### External Hard Drive Path
@@ -64,3 +64,11 @@
 - Then press `Ctrl + A`, this runs a terminal session that still runs when you leave!
 - `screen ls` to list screens and `screen -r` to reattach, `-S` to name screen when making.
 
+### Counting lines in `$BASH`
+
+`wc -l example.txt`
+
+-wordcount (wc), the -l gives lines
+
+`ls *.singlepulse | wc -l > file.txt`
+- this would first, list out all the files that match `*.singlepulse`, and then count all of the lines in all the files and write the number to `file.txt`

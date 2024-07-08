@@ -18,17 +18,19 @@ This is me inside the control room, observing with the 25-m Dwingeloo Radio Tele
   </tr>
 </table>
 
+### Big Picture Outline:
 
-### This Repo Contains:
+The primary goal of my project is to learn and apply radio astronomy techniques for detecting Fast Radio Bursts (FRBs)>
+
+
+
+### Table of Contents:
 Important scripts, notebooks, notes, and flow charts + any presentations for my summer research. 
 
 * [example_pipeline_h5_output](https://github.com/afinemax/Astron_2024/tree/main/example_pipeline__h5_output) contains a notebook that opens a `.h5` file, makes a waterfall plot for practice. Using a `.h5` file made from the pipeline
 * [frb_example_data_june_2024](https://github.com/afinemax/Astron_2024/tree/main/frb_example_data_june_2024) contains a notebook making waterfall plots from CHIME `.npy` files, and two notebooks trying out `fitburst` on CHIME data, a simulation and a possible detection of an FRB
 * [noise_channels](https://github.com/afinemax/Astron_2024/tree/main/noise_channels) contains several notebooks, and a script that looks at past observations taken and calculutes bad frequency channels to mask
 * [inject_sims_into_fil](https://github.com/afinemax/Astron_2024/tree/main/inject_sims_into_fil) , contains notebooks and scripts for injecting simulated bursts into `.fil` data for injection testing the pipeline
-## Big Picture Outline:
-
-The primary goal of my project is to learn and apply radio astronomy techniques for detecting Fast Radio Bursts (FRBs). This involves understanding how radio telescopes convert radio signals into 'raw' data and how this raw data is processed through a data pipeline into science ready products. The pipeline is responsible for identifying and removing Radio Frequency Interference (RFI) and searching for potential extragalactic radio signals (currently using  `presto`, and `fetch`). A key objective is to implement a series of improvements, ranging from minor to major, in the search pipeline to increase its speed, and detection ability. Another objective is to test the pipeline so we can quantify how well it works. Ideally, we aim to detect a Repeating FRB over the summer. However, it is more likely that we will observe a bright pulsar as a final proof of concept that the DRT can be used to observe bright repeating FRBs.
 
 ## TODO list:
 
@@ -61,9 +63,13 @@ The primary goal of my project is to learn and apply radio astronomy techniques 
   - [x] Look into making simulated, injecting simulations into `.fil` files for testing.
 	- `fitburst` has a cool `simulate_burst.py` script that can simulate dedispersed or dispersed dynamic spectrums, not sure how to inject those into `.fil` files.
 	- [will](https://github.com/josephwkania/will/tree/master) is a simulator that can be used to inject (and extract!) simulated pulses into `.fil` files!
+        - Struggling on cliping noise, and normalizing the `.fil` files, and adjusting the amplitude of the injected signal 
   - [x] Observe FRBs, and likely pulsars. Observing repeating FRB20240209A. See [ATel#16670 by Vishwangi Shah (McGill University) on behalf of the CHIME/FRB Collaboration](https://www.astronomerstelegram.org/?read=16670).
   - [x] Try a clustering algorithm for reducing the total number of candidates (e.g. DBSCAN).
   ### To Do:
+  - [ ] Check we are using `ddplan` from `presto` correctly 
+  - [ ] write an introduction section on `FRBS` and the DRT
+  - [ ] Modify `check_frb.py` to run `fetch`, and move the files into the good and bad dirs
   - [ ] Fill in black boxes in the flowcharts.
 	- Look into how `presto` actually removes RFI and finds pulses.
         - Look into how candidates are extracted from the `.fil` file.
