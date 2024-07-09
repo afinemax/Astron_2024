@@ -16,6 +16,7 @@
 
 Clustering is done between `DM` and `time`. RFI, and Real signals are picked up as mulitple candidates in both time, and DM, with little seperation. Signals that are bright will trigger in multiple DMs but still be relatively isolated in time. 
 
+(the python file just contains the imports, and a copy of all the functions here for easy importing)
 
 ### dbscan has two arguments:
 - eps (ε): The maximum distance between two samples for one to be considered as in the neighborhood of the other. This is not a maximum bound on the distances of points within a cluster. This is the most important DBSCAN parameter to choose appropriately for your data set and distance function.
