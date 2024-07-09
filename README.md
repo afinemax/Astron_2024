@@ -1,10 +1,9 @@
-
 # Hunting for Fast Radio Bursts (FRBs) with the 25-m Dwingeloo Radio Telescope (DRT) at ASTRON, the Netherlands 🇳🇱 📡
 ## Advisors: Dr. Tammo Jan Dijkema & Co-advisor Proffesor Jason Hessels
 
 > "We look to the stars, but all we find is RFI." - Found on the back of a poster at ASTRON
 
-In summer 2024, I am a researcher at The Netherlands Institute for Radio Astronomy (ASTRON) with their Summer Research Programme. For my project, I will be using and operating the 25-m Dwingeloo radio telescope. I will study bright repeating Fast Radio Bursts (FRBs) to understand the potential connections between repeating and apparently non-repeating FRBs. As FRBs are hard to catch, I will also observe pulsars to both test the methodology and learn the relevant techniques.
+Over summer 2024, I am a researcher at The Netherlands Institute for Radio Astronomy (ASTRON) with their Summer Research Programme. For my project, I will be using and operating the 25-m Dwingeloo radio telescope. I will study bright repeating Fast Radio Bursts (FRBs) to understand the potential connections between repeating and apparently non-repeating FRBs. As FRBs are hard to catch, I will also observe pulsars to both test the methodology and learn the relevant techniques.
 
 This is me inside the control room, observing with the 25-m Dwingeloo Radio Telescope, and this is a diagnostic plot showing the dynamic spectrum, and some meta data of a possible detection of FRB20240209A I observed on June 26 2024.
 <table>
@@ -52,25 +51,27 @@ Important scripts, notebooks, notes, and flow charts + any presentations for my 
   - [x] Understand what Burst Parameters can be observed & measured directly, and which ones can be inferred.
 	- List out model components from FITBURST, polarization, fluence, etc.
   - [x] Understand how to use [fitburst](https://github.com/CHIMEFRB/fitburst).
+  - [x] Compare pipeline outputs when using the `--ignorechan` flag in  `check_frb.py`
   - [x] Try using `fitburst` on the CHIME data I have, simulated data, and my possible detection of FRB20240209A.
   - [x] Try a clustering algorithm for reducing the total number of candidates (e.g. DBSCAN).
+  - [x] Implement dbscan clustering into `check_frb.py`
 
   ### In Progress:
-  - [ ] Modify the `start_frb.sh` script to record observations on Uranus & Mercurius computers.
-	- Awaiting help from Paul & CAMRAS for cables connecting Uranus to Mercurius.
+  - [x] Modify the `start_frb.sh` script to record observations on Uranus & Mercurius computers.
+	- Paul just plugged in the for cables connecting Uranus to Mercurius.
+	- Can record L band not sure about P band right now
   - [ ] Implement [TransientX](https://github.com/ypmen/TransientX) into the pipeline.
 	- Waiting for it to be installed on Uranus.
-  - [x] Compare pipeline outputs when using the `--ignorechan` flag.
+  - [x] Fix `if` statments for `--ignorechan` option in `check_frb.py` 
   - [x] Look into making simulated, injecting simulations into `.fil` files for testing.
-	- `fitburst` has a cool `simulate_burst.py` script that can simulate dedispersed or dispersed dynamic spectrums, not sure how to inject those into `.fil` files.
+	- `fitburst` has a cool `simulate_burst.py` script that can simulate dedispersed or dispersed dynamic spectrums
 	- [will](https://github.com/josephwkania/will/tree/master) is a simulator that can be used to inject (and extract!) simulated pulses into `.fil` files!
-        - Struggling on cliping noise, and normalizing the `.fil` files, and adjusting the amplitude of the injected signal 
+        - Struggling on controlling the amplitude (SNR) of the injected signal  
   - [x] Observe FRBs, and likely pulsars. Observing repeating FRB20240209A. See [ATel#16670 by Vishwangi Shah (McGill University) on behalf of the CHIME/FRB Collaboration](https://www.astronomerstelegram.org/?read=16670).
-  - [x] Implement dbscan clustering into `check_frb.py`
-  ### To Do:
-  - [ ] Check we are using `ddplan` from `presto` correctly 
+  - [ ] Check we are using `ddplan` from `presto` correcly 
+  - [ ] Modify `check_frb.py` to run `fetch`, and move the files into the good and bad dirs, make diagnostic `.png`s
+  ### To Do: 
   - [ ] write an introduction section on `FRBS` and the DRT
-  - [ ] Modify `check_frb.py` to run `fetch`, and move the files into the good and bad dirs
   - [ ] Fill in black boxes in the flowcharts.
 	- Look into how `presto` actually removes RFI and finds pulses.
         - Look into how candidates are extracted from the `.fil` file.
