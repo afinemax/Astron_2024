@@ -30,8 +30,8 @@ Important scripts, notebooks, notes, and flow charts + any presentations for my 
 * [example_pipeline_h5_output](https://github.com/afinemax/Astron_2024/tree/main/example_pipeline__h5_output) contains a notebook that opens a `.h5` file, makes a waterfall plot for practice. Using a `.h5` file made from the pipeline
 * [frb_example_data_june_2024](https://github.com/afinemax/Astron_2024/tree/main/frb_example_data_june_2024) contains a notebook making waterfall plots from CHIME `.npy` files, and two notebooks trying out `fitburst` on CHIME data, a simulation and a possible detection of an FRB
 * [noise_channels](https://github.com/afinemax/Astron_2024/tree/main/noise_channels) contains several notebooks, and a script that looks at past observations taken and calculutes bad frequency channels to mask
-* [inject_sims_into_fil](https://github.com/afinemax/Astron_2024/tree/main/inject_sims_into_fil) , contains notebooks and scripts for injecting simulated bursts into `.fil` data for injection testing the pipeline
-
+* [inject_sims_into_fil](https://github.com/afinemax/Astron_2024/tree/main/inject_sims_into_fil), contains notebooks and scripts for injecting simulated bursts into `.fil` data for injection testing the pipeline
+* [dbcan_clustering](https://github.com/afinemax/Astron_2024/tree/main/dbscan_clustering), contains a notebook for trying out dbscan for clustering candidates in 2d (DM, Time), contains rough code to edit `check_frb.py` to cluster
 ## TODO list:
 
 <details>
@@ -53,6 +53,7 @@ Important scripts, notebooks, notes, and flow charts + any presentations for my 
 	- List out model components from FITBURST, polarization, fluence, etc.
   - [x] Understand how to use [fitburst](https://github.com/CHIMEFRB/fitburst).
   - [x] Try using `fitburst` on the CHIME data I have, simulated data, and my possible detection of FRB20240209A.
+  - [x] Try a clustering algorithm for reducing the total number of candidates (e.g. DBSCAN).
 
   ### In Progress:
   - [ ] Modify the `start_frb.sh` script to record observations on Uranus & Mercurius computers.
@@ -65,7 +66,7 @@ Important scripts, notebooks, notes, and flow charts + any presentations for my 
 	- [will](https://github.com/josephwkania/will/tree/master) is a simulator that can be used to inject (and extract!) simulated pulses into `.fil` files!
         - Struggling on cliping noise, and normalizing the `.fil` files, and adjusting the amplitude of the injected signal 
   - [x] Observe FRBs, and likely pulsars. Observing repeating FRB20240209A. See [ATel#16670 by Vishwangi Shah (McGill University) on behalf of the CHIME/FRB Collaboration](https://www.astronomerstelegram.org/?read=16670).
-  - [x] Try a clustering algorithm for reducing the total number of candidates (e.g. DBSCAN).
+  - [x] Implement dbscan clustering into `check_frb.py`
   ### To Do:
   - [ ] Check we are using `ddplan` from `presto` correctly 
   - [ ] write an introduction section on `FRBS` and the DRT
