@@ -20,7 +20,7 @@ This is me inside the control room, observing with the 25-m Dwingeloo Radio Tele
 
 ### Big Picture Outline:
 
-The primary goal of my project is to learn and apply radio astronomy techniques for detecting Fast Radio Bursts (FRBs)>
+The Big Picture of my project is to learn & apply radio astronomy techniques for detecting FRBs. This entails understanding how the radio telescope turns radio signals into 'raw' data (in our case voltages), and then how the 'raw' data is further reduced by a data pipeline. The data pipeline searchs for and cuts out Radio Frequency Interference (RFI), and searchs for possible extragalactic radio signals, at present this is done with the `presto` package.  Part of the Big Idea is to make a series of minor to moderate (or even major) improvements to the search pipeline. If I am very lucky, we will be able to detect a Repeating FRB over summer. However, in the more likely case we will be looking at a bright Pulsar to test as a final 'proof of concept' that the DRT can be used in dedicated campaigns to observe bright repeating FRBs.     
 
 
 
