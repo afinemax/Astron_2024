@@ -31,6 +31,7 @@ Important scripts, notebooks, notes, and flow charts + any presentations for my 
 * [noise_channels](https://github.com/afinemax/Astron_2024/tree/main/noise_channels) contains several notebooks, and a script that looks at past observations taken and calculutes bad frequency channels to mask
 * [inject_sims_into_fil](https://github.com/afinemax/Astron_2024/tree/main/inject_sims_into_fil), contains notebooks and scripts for injecting simulated bursts into `.fil` data for injection testing the pipeline
 * [dbcan_clustering](https://github.com/afinemax/Astron_2024/tree/main/dbscan_clustering), contains a notebook for trying out dbscan for clustering candidates in 2d (DM, Time), contains rough code to edit `check_frb.py` to cluster
+* [calling_fetch](https://github.com/afinemax/Astron_2024/tree/main/calling_fetch), contains a notebook and a few modified scripts from the gitlab repo. This enables fetch to be called from within `check_frb.py`, as well as moving the candidate `.h5` files into good or bad directors and making dir plots for ones in the good dir
 ## TODO list:
 
 <details>
@@ -69,7 +70,7 @@ Important scripts, notebooks, notes, and flow charts + any presentations for my 
         - Struggling on controlling the amplitude (SNR) of the injected signal  
   - [x] Observe FRBs, and likely pulsars. Observing repeating FRB20240209A. See [ATel#16670 by Vishwangi Shah (McGill University) on behalf of the CHIME/FRB Collaboration](https://www.astronomerstelegram.org/?read=16670).
   - [ ] Check we are using `ddplan` from `presto` correcly 
-  - [ ] Modify `check_frb.py` to run `fetch`, and move the files into the good and bad dirs, make diagnostic `.png`s
+  - [x] Modify `check_frb.py` to run `fetch`, and move the files into the good and bad dirs, make diagnostic `.png`s
   ### To Do: 
   - [ ] write an introduction section on `FRBS` and the DRT
   - [ ] Fill in black boxes in the flowcharts.
