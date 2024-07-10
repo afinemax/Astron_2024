@@ -28,7 +28,7 @@ The Big Picture of my project is to learn & apply radio astronomy techniques for
 - See [ATel#16670 by Vishwangi Shah (McGill University) on behalf of the CHIME/FRB Collaboration](https://www.astronomerstelegram.org/?read=16670).
 - Expected DM: 176 (pc/cm^3)
 - Expected RA, Dec: 176 289.91 86.06 (deg)
-- Observing Cadence: Typically ~07:00-10:00, 11:00-15:00 (UTC) Monday to Friday 
+- Observing Cadence: Typically ~07:00-10:00, 11:00-15:00 (UTC) Monday to Friday (I have to be physically in the telescope hut) 
 
   
 
