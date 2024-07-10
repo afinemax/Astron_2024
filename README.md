@@ -71,14 +71,24 @@ Important scripts, notebooks, notes, and flow charts + any presentations for my 
   - [x] Observe FRBs, and likely pulsars. Observing repeating FRB20240209A. See [ATel#16670 by Vishwangi Shah (McGill University) on behalf of the CHIME/FRB Collaboration](https://www.astronomerstelegram.org/?read=16670).
   - [ ] Check we are using `ddplan` from `presto` correcly 
   - [x] Modify `check_frb.py` to run `fetch`, and move the files into the good and bad dirs, make diagnostic `.png`s
+	- Just waiting for my previous merge request to go through, and then I can make a new one 
   ### To Do: 
-  - [ ] write an introduction section on `FRBS` and the DRT
+  - [ ] write an introduction section on `FRBS`, the DRT, and our observational parameters (bandwidth, devices, data points per second etc)
   - [ ] Fill in black boxes in the flowcharts.
 	- Look into how `presto` actually removes RFI and finds pulses.
         - Look into how candidates are extracted from the `.fil` file.
-  - [ ] Maybe make `.h5` files with full resolution instead of modified for fetch.
+  - [ ] Make a 'hip' dashboard to display the pngs from the good candidates  
+  - [ ] Work on making the pipeline run in real time
+	- storage managment
+		- delete older data to make space for new data
+		- keep data corresponding to good candidates 
+		- have option to save all the `fil` files
+	- record raw voltages
+  - [ ] Make a script to make `.h5` files with full resolution for a good fetch candidate.
   - [ ] Injection testing the pipeline.
+  - [ ] Make a script that can looks for detection parameters of other radio telescopes over the same time we were observing 
   - [ ] Test the pipeline on Crab or Pulsar and compare the number of recovered vs. missed bursts.
+  	- This would be a good test for our clustering methodology as well. 
   - [ ] Combine data with other telescopes to measure fringes/localization.
 </details>
 
