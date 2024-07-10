@@ -28,7 +28,7 @@ The Big Picture of my project is to learn & apply radio astronomy techniques for
 - See [ATel#16670 by Vishwangi Shah (McGill University) on behalf of the CHIME/FRB Collaboration](https://www.astronomerstelegram.org/?read=16670).
 - Expected DM: 176 (pc/cm^3)
 - Expected RA, Dec: 176 289.91 86.06 (deg)
-- Observing Cadence: ~07:00-10:00, 11:00 - 15:00 (UTC)
+- Observing Cadence: Typically ~07:00-10:00, 11:00-15:00 (UTC) Monday to Friday 
 
   
 
@@ -72,7 +72,7 @@ Important scripts, notebooks, notes, and flow charts + any presentations for my 
   ### In Progress:
   - [ ] Implement [TransientX](https://github.com/ypmen/TransientX) into the pipeline.
 	- Waiting for it to be installed on Uranus.
-  - [x] Fix `if` statments for `--ignorechan` option in `check_frb.py` 
+  - [ ] Fix `if` statments for `--ignorechan` option in `check_frb.py` 
   - [x] Look into making simulated, injecting simulations into `.fil` files for testing.
 	- `fitburst` has a cool `simulate_burst.py` script that can simulate dedispersed or dispersed dynamic spectrums
 	- [will](https://github.com/josephwkania/will/tree/master) is a simulator that can be used to inject (and extract!) simulated pulses into `.fil` files!
@@ -101,6 +101,8 @@ Important scripts, notebooks, notes, and flow charts + any presentations for my 
   - [ ] Test the pipeline on Crab or Pulsar and compare the number of recovered vs. missed bursts.
   	- This would be a good test for our clustering methodology as well. 
   - [ ] Combine data with other telescopes to measure fringes/localization.
+  - [ ] Maybe make a docker container version of the pipeline .
+  - [ ] Currently pipeline outputs a logfile which lists how many candidates,'good' `.h5` files there were, maybe I can do a statstical analysis comparing noise and when on a target
 </details>
 
 
