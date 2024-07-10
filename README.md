@@ -21,7 +21,16 @@ This is me inside the control room, observing with the 25-m Dwingeloo Radio Tele
 
 The Big Picture of my project is to learn & apply radio astronomy techniques for detecting FRBs. This entails understanding how the radio telescope turns radio signals into 'raw' data (in our case voltages), and then how the 'raw' data is further reduced by a data pipeline. The data pipeline searchs for and cuts out Radio Frequency Interference (RFI), and searchs for possible extragalactic radio signals, at present this is done with the `presto` package.  Part of the Big Idea is to make a series of minor to moderate (or even major) improvements to the search pipeline. If I am very lucky, we will be able to detect a Repeating FRB over summer. However, in the more likely case we will be looking at a bright Pulsar to test as a final 'proof of concept' that the DRT can be used in dedicated campaigns to observe bright repeating FRBs.     
 
+### Currently Observing:
 
+#### FRB20240209A:
+
+- See [ATel#16670 by Vishwangi Shah (McGill University) on behalf of the CHIME/FRB Collaboration](https://www.astronomerstelegram.org/?read=16670).
+- Expected DM: 176 (pc/cm^3)
+- Expected RA, Dec: 176 289.91 86.06 (deg)
+- Observing Cadence: ~07:00-10:00, 11:00 - 15:00 (UTC)
+
+  
 
 ### Table of Contents:
 Important scripts, notebooks, notes, and flow charts + any presentations for my summer research. 
@@ -56,11 +65,11 @@ Important scripts, notebooks, notes, and flow charts + any presentations for my 
   - [x] Try using `fitburst` on the CHIME data I have, simulated data, and my possible detection of FRB20240209A.
   - [x] Try a clustering algorithm for reducing the total number of candidates (e.g. DBSCAN).
   - [x] Implement dbscan clustering into `check_frb.py`
+  - [x] Modify the scrits to record observations on Uranus (instead of Mercurius)
+	- Paul, and Tammo did this, plugging in some cabels and running a data stream from mercurius to uranus
+	- can record L and P bands directly onto Uranus
 
   ### In Progress:
-  - [x] Modify the `start_frb.sh` script to record observations on Uranus & Mercurius computers.
-	- Paul just plugged in the for cables connecting Uranus to Mercurius.
-	- Can record L band not sure about P band right now
   - [ ] Implement [TransientX](https://github.com/ypmen/TransientX) into the pipeline.
 	- Waiting for it to be installed on Uranus.
   - [x] Fix `if` statments for `--ignorechan` option in `check_frb.py` 
@@ -68,11 +77,13 @@ Important scripts, notebooks, notes, and flow charts + any presentations for my 
 	- `fitburst` has a cool `simulate_burst.py` script that can simulate dedispersed or dispersed dynamic spectrums
 	- [will](https://github.com/josephwkania/will/tree/master) is a simulator that can be used to inject (and extract!) simulated pulses into `.fil` files!
         - Struggling on controlling the amplitude (SNR) of the injected signal  
-  - [x] Observe FRBs, and likely pulsars. Observing repeating FRB20240209A. See [ATel#16670 by Vishwangi Shah (McGill University) on behalf of the CHIME/FRB Collaboration](https://www.astronomerstelegram.org/?read=16670).
+  #- [x] Observe FRBs, and likely pulsars. Observing repeating FRB20240209A. See [ATel#16670 by Vishwangi Shah (McGill University) on behalf of the CHIME/FRB Collaboration](https://www.astronomerstelegram.org/?read=16670).
   - [ ] Check we are using `ddplan` from `presto` correcly 
   - [x] Modify `check_frb.py` to run `fetch`, and move the files into the good and bad dirs, make diagnostic `.png`s
-	- Just waiting for my previous merge request to go through, and then I can make a new one 
+	- Just waiting for my previous merge request to go through, and then I can make a new one
+	- running `predict.py` while recording data to uranus causes the data recording to crash 
   ### To Do: 
+  - [ ] Understand what Paul and Tammo did to have the data record on Uranus
   - [ ] write an introduction section on `FRBS`, the DRT, and our observational parameters (bandwidth, devices, data points per second etc)
   - [ ] Fill in black boxes in the flowcharts.
 	- Look into how `presto` actually removes RFI and finds pulses.
