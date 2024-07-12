@@ -27,7 +27,7 @@ The Big Picture of my project is to learn & apply radio astronomy techniques for
 
 - See [ATel#16670 by Vishwangi Shah (McGill University) on behalf of the CHIME/FRB Collaboration](https://www.astronomerstelegram.org/?read=16670).
 - Expected DM: 176 (pc/cm^3)
-- Expected RA, Dec: 176 289.91 86.06 (deg)
+- Expected RA, Dec: 289.91, 86.06 (deg)
 - Observing Cadence: Typically ~07:00-10:00, 11:00-15:00 (UTC) Monday to Friday (I have to be physically in the telescope hut) 
 
   
@@ -101,7 +101,8 @@ Important scripts, notebooks, notes, and flow charts + any presentations for my 
   - [ ] Test the pipeline on Crab or Pulsar and compare the number of recovered vs. missed bursts.
   	- This would be a good test for our clustering methodology as well. 
   - [ ] Combine data with other telescopes to measure fringes/localization.
-  - [ ] Maybe make a docker container version of the pipeline .
+  - [ ] Maybe make a docker container version of the pipeline.
+  - [ ] Understand Red vs White Noise.
   - [ ] Currently pipeline outputs a logfile which lists how many candidates,'good' `.h5` files there were, maybe I can do a statstical analysis comparing noise and when on a target
 </details>
 
