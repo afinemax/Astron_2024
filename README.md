@@ -3,7 +3,7 @@
 
 > "We look to the stars, but all we find is RFI." - Found on the back of a poster at ASTRON
 
-Over summer 2024, I am a researcher at The Netherlands Institute for Radio Astronomy (ASTRON) with their Summer Research Programme. For my project, I will be using and operating the 25-m Dwingeloo radio telescope. I will study bright repeating Fast Radio Bursts (FRBs) to understand the potential connections between repeating and apparently non-repeating FRBs. As FRBs are hard to catch, I will also observe pulsars to both test the methodology and learn the relevant techniques.
+Over summer 2024, I am a researcher at The Netherlands Institute for Radio Astronomy (ASTRON) with their Summer Research Programme. For my project, I am using and operating the 25-m Dwingeloo radio telescope. I am studing bright repeating Fast Radio Bursts (FRBs) to understand the potential connections between repeating and apparently non-repeating FRBs. As FRBs are hard to catch, I will also observe pulsars to both test the methodology and learn the relevant techniques.
 
 This is me inside the control room, observing with the 25-m Dwingeloo Radio Telescope, and this is a diagnostic plot showing the dynamic spectrum, and some meta data of a possible detection of FRB20240209A I observed on June 26 2024.
 <table>
@@ -33,8 +33,6 @@ The Big Picture of my project is to learn & apply radio astronomy techniques for
   
 
 ### Table of Contents:
-Important scripts, notebooks, notes, and flow charts + any presentations for my summer research. 
-
 * [example_pipeline_h5_output](https://github.com/afinemax/Astron_2024/tree/main/example_pipeline__h5_output) contains a notebook that opens a `.h5` file, makes a waterfall plot for practice. Using a `.h5` file made from the pipeline
 * [frb_example_data_june_2024](https://github.com/afinemax/Astron_2024/tree/main/frb_example_data_june_2024) contains a notebook making waterfall plots from CHIME `.npy` files, and two notebooks trying out `fitburst` on CHIME data, a simulation and a possible detection of an FRB
 * [noise_channels](https://github.com/afinemax/Astron_2024/tree/main/noise_channels) contains several notebooks, and a script that looks at past observations taken and calculutes bad frequency channels to mask
@@ -77,24 +75,29 @@ Important scripts, notebooks, notes, and flow charts + any presentations for my 
 	- `fitburst` has a cool `simulate_burst.py` script that can simulate dedispersed or dispersed dynamic spectrums
 	- [will](https://github.com/josephwkania/will/tree/master) is a simulator that can be used to inject (and extract!) simulated pulses into `.fil` files!
         - Struggling on controlling the amplitude (SNR) of the injected signal  
-  #- [x] Observe FRBs, and likely pulsars. Observing repeating FRB20240209A. See [ATel#16670 by Vishwangi Shah (McGill University) on behalf of the CHIME/FRB Collaboration](https://www.astronomerstelegram.org/?read=16670).
-  - [ ] Check we are using `ddplan` from `presto` correcly 
+  - [ ] Use `ddplan` from `presto` to dynamically select how many DM trials the pipeline needs 
   - [x] Modify `check_frb.py` to run `fetch`, and move the files into the good and bad dirs, make diagnostic `.png`s
 	- Just waiting for my previous merge request to go through, and then I can make a new one
-	- running `predict.py` while recording data to uranus causes the data recording to crash 
+	- running `predict.py` while recording data to uranus causes the data recording to crash
+	- Need to fancy fancy way of moving to the unique `/process/good` dirs
+ - [ ] Add back log file for candidates
+ - [ ] Work on making the pipeline run in real time
+	- Figure out how many CPUs I can use before I cause the IQ stuff to crash
+	- Modify storage location of `*.h5` candidate files from `/process` to `/process/>bandname<` for runnning `fetch`
+        - storage managment
+                - delete older data to make space for new data
+                - keep data corresponding to good candidates 
+                - have option to save all the `fil` files
+        - record raw voltages
+ 
   ### To Do: 
   - [ ] Understand what Paul and Tammo did to have the data record on Uranus
   - [ ] write an introduction section on `FRBS`, the DRT, and our observational parameters (bandwidth, devices, data points per second etc)
   - [ ] Fill in black boxes in the flowcharts.
 	- Look into how `presto` actually removes RFI and finds pulses.
         - Look into how candidates are extracted from the `.fil` file.
-  - [ ] Make a 'hip' dashboard to display the pngs from the good candidates  
-  - [ ] Work on making the pipeline run in real time
-	- storage managment
-		- delete older data to make space for new data
-		- keep data corresponding to good candidates 
-		- have option to save all the `fil` files
-	- record raw voltages
+  - [ ] Make a 'hip' mastodon bot to display the pngs from the good candidates
+	- [ ] maybe make the pngs nan out detected RFI  
   - [ ] Make a script to make `.h5` files with full resolution for a good fetch candidate.
   - [ ] Injection testing the pipeline.
   - [ ] Make a script that can looks for detection parameters of other radio telescopes over the same time we were observing 
@@ -103,7 +106,6 @@ Important scripts, notebooks, notes, and flow charts + any presentations for my 
   - [ ] Combine data with other telescopes to measure fringes/localization.
   - [ ] Maybe make a docker container version of the pipeline.
   - [ ] Understand Red vs White Noise.
-  - [ ] Currently pipeline outputs a logfile which lists how many candidates,'good' `.h5` files there were, maybe I can do a statstical analysis comparing noise and when on a target
 </details>
 
 
