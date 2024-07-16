@@ -17,7 +17,7 @@ This is me inside the control room, observing with the 25-m Dwingeloo Radio Tele
   </tr>
 </table>
 
-### [Pipeline GitLab Repo:](https://gitlab.camras.nl/dijkema/frbscripts)
+### Pipeline GitLab Repo: [Here](https://gitlab.camras.nl/dijkema/frbscripts)
 
 
 ### Big Picture Outline:
@@ -42,6 +42,8 @@ The Big Picture of my project is to learn & apply radio astronomy techniques for
 * [inject_sims_into_fil](https://github.com/afinemax/Astron_2024/tree/main/inject_sims_into_fil), contains notebooks and scripts for injecting simulated bursts into `.fil` data for injection testing the pipeline
 * [dbcan_clustering](https://github.com/afinemax/Astron_2024/tree/main/dbscan_clustering), contains a notebook for trying out dbscan for clustering candidates in 2d (DM, Time), contains rough code to edit `check_frb.py` to cluster
 * [calling_fetch](https://github.com/afinemax/Astron_2024/tree/main/calling_fetch), contains a notebook and a few modified scripts from the gitlab repo. This enables fetch to be called from within `check_frb.py`, as well as moving the candidate `.h5` files into good or bad directors and making dir plots for ones in the good dir
+* [ddplan](https://github.com/afinemax/Astron_2024/tree/main/ddplan), contains a notebook trying out `DDplan.py` from presto on my laptop, and the new function that has been incorporated into the pipeline 
+* [presto_with_docker](https://github.com/afinemax/Astron_2024/tree/main/running_presto_with_docker), contains a notebook for running, and executing presto commands - with presto running in a docker container 
 ## TODO list:
 
 <details>
@@ -66,25 +68,33 @@ The Big Picture of my project is to learn & apply radio astronomy techniques for
   - [x] Try using `fitburst` on the CHIME data I have, simulated data, and my possible detection of FRB20240209A.
   - [x] Try a clustering algorithm for reducing the total number of candidates (e.g. DBSCAN).
   - [x] Implement dbscan clustering into `check_frb.py`
+	- Reduces number of candidates by ~ the number of DM trials
   - [x] Modify the scrits to record observations on Uranus (instead of Mercurius)
 	- Paul, and Tammo did this, plugging in some cabels and running a data stream from mercurius to uranus
 	- can record L and P bands directly onto Uranus
+  - [x] Modify `check_frb.py` to run `fetch`, and move the files into the good and bad dirs, make diagnostic `.png`s
+  - [x] Add back log file for candidates
+	- Added a `#header`
+  - [x] Work on making the pipeline run in real time
+        - Figure out how many CPUs I can use before I cause the IQ stuff to crash
+        - Modify storage location of `*.h5` candidate files from `/process` to `/process/>bandname<` for runnning `fet>
+        - storage managment
+                - delete older data to make space for new data
+                - keep data corresponding to good candidates
+                - have option to save all the `fil` files
+        - record raw voltages
+
+
 
   ### In Progress:
   - [ ] Implement [TransientX](https://github.com/ypmen/TransientX) into the pipeline.
 	- Waiting for it to be installed on Uranus.
-  - [ ] Fix `if` statments for `--ignorechan` option in `check_frb.py` 
+  - [ ] Double Check `if` statments for `--ignorechan` option in `check_frb.py` 
   - [x] Look into making simulated, injecting simulations into `.fil` files for testing.
 	- `fitburst` has a cool `simulate_burst.py` script that can simulate dedispersed or dispersed dynamic spectrums
 	- [will](https://github.com/josephwkania/will/tree/master) is a simulator that can be used to inject (and extract!) simulated pulses into `.fil` files!
         - Struggling on controlling the amplitude (SNR) of the injected signal  
-  - [ ] Use `ddplan` from `presto` to dynamically select how many DM trials the pipeline needs 
-  - [x] Modify `check_frb.py` to run `fetch`, and move the files into the good and bad dirs, make diagnostic `.png`s
-	- Just waiting for my previous merge request to go through, and then I can make a new one
-	- running `predict.py` while recording data to uranus causes the data recording to crash
-	- Need to fancy fancy way of moving to the unique `/process/good` dirs
- - [ ] Add back log file for candidates
- - [ ] Work on making the pipeline run in real time
+ - [x] Work on making the pipeline run in real time
 	- Figure out how many CPUs I can use before I cause the IQ stuff to crash
 	- Modify storage location of `*.h5` candidate files from `/process` to `/process/>bandname<` for runnning `fetch`
         - storage managment
@@ -108,9 +118,10 @@ The Big Picture of my project is to learn & apply radio astronomy techniques for
   	- This would be a good test for our clustering methodology as well. 
   - [ ] Combine data with other telescopes to measure fringes/localization.
   - [ ] Maybe make a docker container version of the pipeline.
+  - [ ] Read more FRB papers.
+  - [ ] Make 'hip' popular science videos on reserach.
   - [ ] Understand Red vs White Noise.
 </details>
-
 
 
 ## License
