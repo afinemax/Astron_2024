@@ -95,13 +95,18 @@ The Big Picture of my project is to learn & apply radio astronomy techniques for
 	- [will](https://github.com/josephwkania/will/tree/master) is a simulator that can be used to inject (and extract!) simulated pulses into `.fil` files!
         - Struggling on controlling the amplitude (SNR) of the injected signal  
  - [x] Work on making the pipeline run in real time
-	- Figure out how many CPUs I can use before I cause the IQ stuff to crash
-	- Modify storage location of `*.h5` candidate files from `/process` to `/process/>bandname<` for runnning `fetch`
-        - storage managment
+	- Figure out how many CPUs I can use before I cause the IQ stuff to crash.
+		- system crashes a lot now :(( not sure the cause, I think maybe telescope tours?
+		- `check_frb.py` might run after each crash on the partial `.fil` file, this is bad? The `fetch` calls are bad.
+	- [x] Modify storage location of `.fil` files from `/date` to `/date/>bandname<` for runnning the pipeline in real time
+        - [x] Make a `good` dir to hold all the good `.h5` and `.png` files located at `/date/good`
+	- storage managment
                 - delete older data to make space for new data
+			- Should I delete as we process them? or do this by hand still?
                 - keep data corresponding to good candidates 
                 - have option to save all the `fil` files
         - record raw voltages
+		- not sure how to record raw voltages
  
   ### To Do: 
   - [ ] Understand what Paul and Tammo did to have the data record on Uranus
