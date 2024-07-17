@@ -75,15 +75,6 @@ The Big Picture of my project is to learn & apply radio astronomy techniques for
   - [x] Modify `check_frb.py` to run `fetch`, and move the files into the good and bad dirs, make diagnostic `.png`s
   - [x] Add back log file for candidates
 	- Added a `#header`
-  - [x] Work on making the pipeline run in real time
-        - Figure out how many CPUs I can use before I cause the IQ stuff to crash
-        - Modify storage location of `*.h5` candidate files from `/process` to `/process/>bandname<` for runnning `fet>
-        - storage managment
-                - delete older data to make space for new data
-                - keep data corresponding to good candidates
-                - have option to save all the `fil` files
-        - record raw voltages
-
 
 
   ### In Progress:
@@ -93,12 +84,13 @@ The Big Picture of my project is to learn & apply radio astronomy techniques for
   - [x] Look into making simulated, injecting simulations into `.fil` files for testing.
 	- `fitburst` has a cool `simulate_burst.py` script that can simulate dedispersed or dispersed dynamic spectrums
 	- [will](https://github.com/josephwkania/will/tree/master) is a simulator that can be used to inject (and extract!) simulated pulses into `.fil` files!
-        - Struggling on controlling the amplitude (SNR) of the injected signal  
+        - [ ] Struggling on controlling the amplitude (SNR) of the injected signal  
  - [x] Work on making the pipeline run in real time
 	- Figure out how many CPUs I can use before I cause the IQ stuff to crash.
 		- system crashes a lot now :(( not sure the cause, I think maybe telescope tours?
 		- `check_frb.py` might run after each crash on the partial `.fil` file, this is bad? The `fetch` calls are bad.
 	- [x] Modify storage location of `.fil` files from `/date` to `/date/>bandname<` for runnning the pipeline in real time
+		- [x] Modify `frb_dashboard.py` for the new file organization
         - [x] Make a `good` dir to hold all the good `.h5` and `.png` files located at `/date/good`
 	- storage managment
                 - delete older data to make space for new data
