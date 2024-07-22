@@ -19,12 +19,11 @@ This is me inside the control room, observing with the 25-m Dwingeloo Radio Tele
 
 ### Pipeline GitLab Repo: [Here](https://gitlab.camras.nl/dijkema/frbscripts)
 
-
 ### Big Picture Outline:
 
 The Big Picture of my project is to learn & apply radio astronomy techniques for detecting FRBs. This entails understanding how the radio telescope turns radio signals into 'raw' data (in our case voltages), and then how the 'raw' data is further reduced by a data pipeline. The data pipeline searchs for and cuts out Radio Frequency Interference (RFI), and searchs for possible extragalactic radio signals, at present this is done with the `presto` package.  Part of the Big Idea is to make a series of minor to moderate (or even major) improvements to the search pipeline. If I am very lucky, we will be able to detect a Repeating FRB over summer. However, in the more likely case we will be looking at a bright Pulsar to test as a final 'proof of concept' that the DRT can be used in dedicated campaigns to observe bright repeating FRBs.     
 
-### Currently Observing:
+### Previosuly Observing:
 
 #### FRB20240209A:
 
@@ -32,7 +31,7 @@ The Big Picture of my project is to learn & apply radio astronomy techniques for
 - Expected DM: 176 (pc/cm^3)
 - Expected RA, Dec: 289.91, 86.06 (deg)
 - Observing Cadence: Typically ~07:00-10:00, 11:00-15:00 (UTC) Monday to Friday (I have to be physically in the telescope hut) 
-
+- Total of around 200 hours on target. Stopped observing around the 16th of July. 
   
 
 ### Table of Contents:
@@ -84,21 +83,17 @@ The Big Picture of my project is to learn & apply radio astronomy techniques for
   - [x] Look into making simulated, injecting simulations into `.fil` files for testing.
 	- `fitburst` has a cool `simulate_burst.py` script that can simulate dedispersed or dispersed dynamic spectrums
 	- [will](https://github.com/josephwkania/will/tree/master) is a simulator that can be used to inject (and extract!) simulated pulses into `.fil` files!
-        - [ ] Struggling on controlling the amplitude (SNR) of the injected signal  
+        - [ ] Struggling on controlling the amplitude (SNR) of the injected signal, talked to Dirk who offered advice but haven't worked on this in a while  
  - [x] Work on making the pipeline run in real time
-	- Figure out how many CPUs I can use before I cause the IQ stuff to crash.
-		- system crashes a lot now :(( not sure the cause, I think maybe telescope tours?
-		- `check_frb.py` might run after each crash on the partial `.fil` file, this is bad? The `fetch` calls are bad.
 	- [x] Modify storage location of `.fil` files from `/date` to `/date/>bandname<` for runnning the pipeline in real time
 		- [x] Modify `frb_dashboard.py` for the new file organization
         - [x] Make a `good` dir to hold all the good `.h5` and `.png` files located at `/date/good`
-	- storage managment
-                - delete older data to make space for new data
-			- Should I delete as we process them? or do this by hand still?
-                - keep data corresponding to good candidates 
-                - have option to save all the `fil` files
-        - record raw voltages
-		- not sure how to record raw voltages
+	- [ ] Figure out what causes the pipeline to crash, and adjust the number of CPU cores as needed 
+- [x] record raw voltages
+	- [x] Understand how to record raw voltages aka baseband data
+	- [x] wrote function to slice a small chunk of data into a new file for a candidate 
+	- [ ] write a function to convert arrival times for different frequency bands based on the DM
+	- [ ] write function to loop through candidates, and then delete the big baseband files	
  
   ### To Do: 
   - [ ] Understand what Paul and Tammo did to have the data record on Uranus
@@ -116,6 +111,10 @@ The Big Picture of my project is to learn & apply radio astronomy techniques for
   - [ ] Combine data with other telescopes to measure fringes/localization.
   - [ ] Maybe make a docker container version of the pipeline.
   - [ ] Read more FRB papers.
+  - [ ] Read how the `single_pulse_search` works in `presto`, and how it determines the SNR
+  - [ ] Make nicely formatted documentation for the pipeline. 
+  - [ ] Understand what happens when intra-channel Dispersion is dominate. 
+  - [ ] Understand how our FRB search and CHIME's differ.
   - [ ] Make 'hip' popular science videos on reserach.
   - [ ] Understand Red vs White Noise.
 </details>
