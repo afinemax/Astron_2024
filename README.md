@@ -23,6 +23,15 @@ This is me inside the control room, observing with the 25-m Dwingeloo Radio Tele
 
 The Big Picture of my project is to learn & apply radio astronomy techniques for detecting FRBs. This entails understanding how the radio telescope turns radio signals into 'raw' data (in our case voltages), and then how the 'raw' data is further reduced by a data pipeline. The data pipeline searchs for and cuts out Radio Frequency Interference (RFI), and searchs for possible extragalactic radio signals, at present this is done with the `presto` package.  Part of the Big Idea is to make a series of minor to moderate (or even major) improvements to the search pipeline. If I am very lucky, we will be able to detect a Repeating FRB over summer. However, in the more likely case we will be looking at a bright Pulsar to test as a final 'proof of concept' that the DRT can be used in dedicated campaigns to observe bright repeating FRBs.     
 
+### Table of Contents:
+* [example_pipeline_h5_output](https://github.com/afinemax/Astron_2024/tree/main/example_pipeline__h5_output) contains a notebook that opens a `.h5` file, makes a waterfall plot for practice. Using a `.h5` file made from the pipeline
+* [frb_example_data_june_2024](https://github.com/afinemax/Astron_2024/tree/main/frb_example_data_june_2024) contains a notebook making waterfall plots from CHIME `.npy` files, and two notebooks trying out `fitburst` on CHIME data, a simulation and a possible detection of an FRB
+* [noise_channels](https://github.com/afinemax/Astron_2024/tree/main/noise_channels) contains several notebooks, and a script that looks at past observations taken and calculutes bad frequency channels to mask
+* [inject_sims_into_fil](https://github.com/afinemax/Astron_2024/tree/main/inject_sims_into_fil), contains notebooks and scripts for injecting simulated bursts into `.fil` data for injection testing the pipeline
+* [dbcan_clustering](https://github.com/afinemax/Astron_2024/tree/main/dbscan_clustering), contains a notebook for trying out dbscan for clustering candidates in 2d (DM, Time), contains rough code to edit `check_frb.py` to cluster
+* [calling_fetch](https://github.com/afinemax/Astron_2024/tree/main/calling_fetch), contains a notebook and a few modified scripts from the gitlab repo. This enables fetch to be called from within `check_frb.py`, as well as moving the candidate `.h5` files into good or bad directors and making dir plots for ones in the good dir
+* [ddplan](https://github.com/afinemax/Astron_2024/tree/main/ddplan), contains a notebook trying out `DDplan.py` from presto on my laptop, and the new function that has been incorporated into the pipeline 
+* [presto_with_docker](https://github.com/afinemax/Astron_2024/tree/main/running_presto_with_docker), contains a notebook for running, and executing presto commands - with presto running in a docker container 
 
 ### Observing
 <details>
@@ -52,16 +61,7 @@ The Big Picture of my project is to learn & apply radio astronomy techniques for
 
 </details>
 
-### Table of Contents:
-* [example_pipeline_h5_output](https://github.com/afinemax/Astron_2024/tree/main/example_pipeline__h5_output) contains a notebook that opens a `.h5` file, makes a waterfall plot for practice. Using a `.h5` file made from the pipeline
-* [frb_example_data_june_2024](https://github.com/afinemax/Astron_2024/tree/main/frb_example_data_june_2024) contains a notebook making waterfall plots from CHIME `.npy` files, and two notebooks trying out `fitburst` on CHIME data, a simulation and a possible detection of an FRB
-* [noise_channels](https://github.com/afinemax/Astron_2024/tree/main/noise_channels) contains several notebooks, and a script that looks at past observations taken and calculutes bad frequency channels to mask
-* [inject_sims_into_fil](https://github.com/afinemax/Astron_2024/tree/main/inject_sims_into_fil), contains notebooks and scripts for injecting simulated bursts into `.fil` data for injection testing the pipeline
-* [dbcan_clustering](https://github.com/afinemax/Astron_2024/tree/main/dbscan_clustering), contains a notebook for trying out dbscan for clustering candidates in 2d (DM, Time), contains rough code to edit `check_frb.py` to cluster
-* [calling_fetch](https://github.com/afinemax/Astron_2024/tree/main/calling_fetch), contains a notebook and a few modified scripts from the gitlab repo. This enables fetch to be called from within `check_frb.py`, as well as moving the candidate `.h5` files into good or bad directors and making dir plots for ones in the good dir
-* [ddplan](https://github.com/afinemax/Astron_2024/tree/main/ddplan), contains a notebook trying out `DDplan.py` from presto on my laptop, and the new function that has been incorporated into the pipeline 
-* [presto_with_docker](https://github.com/afinemax/Astron_2024/tree/main/running_presto_with_docker), contains a notebook for running, and executing presto commands - with presto running in a docker container 
-## TODO list:
+### TODO list:
 
 <details>
   <summary><strong>Tasks:</strong></summary>
