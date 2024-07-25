@@ -24,6 +24,34 @@ This is me inside the control room, observing with the 25-m Dwingeloo Radio Tele
 The Big Picture of my project is to learn & apply radio astronomy techniques for detecting FRBs. This entails understanding how the radio telescope turns radio signals into 'raw' data (in our case voltages), and then how the 'raw' data is further reduced by a data pipeline. The data pipeline searchs for and cuts out Radio Frequency Interference (RFI), and searchs for possible extragalactic radio signals, at present this is done with the `presto` package.  Part of the Big Idea is to make a series of minor to moderate (or even major) improvements to the search pipeline. If I am very lucky, we will be able to detect a Repeating FRB over summer. However, in the more likely case we will be looking at a bright Pulsar to test as a final 'proof of concept' that the DRT can be used in dedicated campaigns to observe bright repeating FRBs.     
 
 
+### Observing
+<details>
+  <summary><strong>Details:</strong></summary>
+
+
+#### Currently Observing:
+
+####  FRB20240619D:
+- See [ATel #16690, detected by MeerKat](https://www.astronomerstelegram.org/?read=16690) and [ATel #16732, detected by Westerbork](https://www.astronomerstelegram.org/?read=16732)
+- Expected DM: 465 (pc/cm^3)
+- Expected Ra, Dec: 297.37, -25.21 (deg)
+- We have limited observation time, typically its up ~23:00 - 04:00, I have to be physically in the telescope to take data...
+- I have done a few nights, but no luck yet :((
+
+### Previosuly Observing:
+
+#### FRB20240209A:
+
+- See [ATel#16670 by Vishwangi Shah (McGill University) on behalf of the CHIME/FRB Collaboration](https://www.astronom>
+- Expected DM: 176 (pc/cm^3)
+- Expected RA, Dec: 289.91, 86.06 (deg)
+- Observing Cadence: Typically ~07:00-10:00, 11:00-15:00 (UTC) Monday to Friday (I have to be physically in the telesc>
+- Total of around 200 hours on target. Stopped observing around the 16th of July.
+
+
+
+</details>
+
 ### Previosuly Observing:
 
 #### FRB20240209A:
