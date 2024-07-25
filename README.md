@@ -29,7 +29,7 @@ The Big Picture of my project is to learn & apply radio astronomy techniques for
   <summary><strong>Details:</strong></summary>
 
 
-#### Currently Observing:
+### Currently Observing:
 
 ####  FRB20240619D:
 - See [ATel #16690, detected by MeerKat](https://www.astronomerstelegram.org/?read=16690) and [ATel #16732, detected by Westerbork](https://www.astronomerstelegram.org/?read=16732)
@@ -51,17 +51,6 @@ The Big Picture of my project is to learn & apply radio astronomy techniques for
 
 
 </details>
-
-### Previosuly Observing:
-
-#### FRB20240209A:
-
-- See [ATel#16670 by Vishwangi Shah (McGill University) on behalf of the CHIME/FRB Collaboration](https://www.astronomerstelegram.org/?read=16670).
-- Expected DM: 176 (pc/cm^3)
-- Expected RA, Dec: 289.91, 86.06 (deg)
-- Observing Cadence: Typically ~07:00-10:00, 11:00-15:00 (UTC) Monday to Friday (I have to be physically in the telescope hut) 
-- Total of around 200 hours on target. Stopped observing around the 16th of July. 
-  
 
 ### Table of Contents:
 * [example_pipeline_h5_output](https://github.com/afinemax/Astron_2024/tree/main/example_pipeline__h5_output) contains a notebook that opens a `.h5` file, makes a waterfall plot for practice. Using a `.h5` file made from the pipeline
