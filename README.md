@@ -51,10 +51,10 @@ The Big Picture of my project is to learn & apply radio astronomy techniques for
 
 #### FRB20240209A:
 
-- See [ATel#16670 by Vishwangi Shah (McGill University) on behalf of the CHIME/FRB Collaboration](https://www.astronom>
+- See [ATel#16670 by Vishwangi Shah (McGill University) on behalf of the CHIME/FRB Collaboration](https://www.astronomerstelegram.org/?findmsg)
 - Expected DM: 176 (pc/cm^3)
 - Expected RA, Dec: 289.91, 86.06 (deg)
-- Observing Cadence: Typically ~07:00-10:00, 11:00-15:00 (UTC) Monday to Friday (I have to be physically in the telesc>
+- Observing Cadence: Typically ~07:00-10:00, 11:00-15:00 (UTC) Monday to Friday (I have to be physically in the telescope
 - Total of around 200 hours on target. Stopped observing around the 16th of July.
 
 
