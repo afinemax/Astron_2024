@@ -31,6 +31,7 @@
 `ssh -N -f -L localhost:8888:localhost:8888 maxfine@uranus`
 - does the local portforwarding to the host computer
 
+- run `sudo lsof -i :8888` to see process using port 8888 on my local, I might need to kill it
 ### External Hard Drive Path
 
 `camrasdemo@mercurius:/media/camrasdemo/3f3a1b8a-f7dc-4dad-97f4-7b3f0ffa6cbf/2024-03-24$`
