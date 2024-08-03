@@ -37,13 +37,16 @@ The Big Picture of my project is to learn & apply radio astronomy techniques for
 * [presto_with_docker](https://github.com/afinemax/Astron_2024/tree/main/running_presto_with_docker), contains a notebook for running, and executing presto commands - with presto running in a docker container 
 * [recording_baseband_data](https://github.com/afinemax/Astron_2024/tree/main/recording_baseband_data), contains a notebook for trying to record baseband data, take slices for good candidates, and slices for good candidates in other bands
 * [Crab analysis](https://github.com/afinemax/Astron_2024/tree/main/crab_analysis), contains notebooks, and work for analysing the pulses from the crab
-### Observing (FRBs)
-<details>
-  <summary><strong>Details:</strong></summary>
 
 ### Data Releases:
 * If you want any data, just contact me
 * [Crab giant pulse detected with the Dwingeloo radio telescope on 2024-07-30](https://zenodo.org/records/13143544)
+
+
+
+### Observing (FRBs)
+<details>
+  <summary><strong>Details:</strong></summary>
 
 
 ### Currently Observing:
