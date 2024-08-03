@@ -10,7 +10,7 @@
 
 ### My Plots:
 ![Alt Text](https://github.com/afinemax/Astron_2024/blob/main/crab_analysis/crab_dm.png "Histograms of Measured DM from Crab with the telescope")
-![Alt Text}(https://github.com/afinemax/Astron_2024/blob/main/crab_analysis/snr_freq.png)
+![Alt Text](https://github.com/afinemax/Astron_2024/blob/main/crab_analysis/snr_freq.png)
 	
 
 ### TODO:
