@@ -41,6 +41,10 @@ The Big Picture of my project is to learn & apply radio astronomy techniques for
 <details>
   <summary><strong>Details:</strong></summary>
 
+### Data Releases:
+* If you want any data, just contact me
+* [Crab giant pulse detected with the Dwingeloo radio telescope on 2024-07-30](https://zenodo.org/records/13143544)
+
 
 ### Currently Observing:
 
