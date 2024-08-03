@@ -36,7 +36,8 @@ The Big Picture of my project is to learn & apply radio astronomy techniques for
 * [ddplan](https://github.com/afinemax/Astron_2024/tree/main/ddplan), contains a notebook trying out `DDplan.py` from presto on my laptop, and the new function that has been incorporated into the pipeline 
 * [presto_with_docker](https://github.com/afinemax/Astron_2024/tree/main/running_presto_with_docker), contains a notebook for running, and executing presto commands - with presto running in a docker container 
 * [recording_baseband_data](https://github.com/afinemax/Astron_2024/tree/main/recording_baseband_data), contains a notebook for trying to record baseband data, take slices for good candidates, and slices for good candidates in other bands
-### Observing
+* [Crab analysis](https://github.com/afinemax/Astron_2024/tree/main/crab_analysis), contains notebooks, and work for analysing the pulses from the crab
+### Observing (FRBs)
 <details>
   <summary><strong>Details:</strong></summary>
 
@@ -49,6 +50,13 @@ The Big Picture of my project is to learn & apply radio astronomy techniques for
 - Expected Ra, Dec: 297.37, -25.21 (deg)
 - We have limited observation time, typically its up ~23:00 - 04:00, I have to be physically in the telescope to take data...
 - I have done a few nights, but no luck yet :((
+
+
+#### FRB20240316A
+- See [ATel #16737 , detected by CHIME](https://www.astronomerstelegram.org/?read=16734)
+- Expected DM: 351 (pc/cm^3)
+- Expected Ra, Dec: 354.58, 32.38
+
 
 ### Previosuly Observing:
 
@@ -97,6 +105,17 @@ The Big Picture of my project is to learn & apply radio astronomy techniques for
 	- Added a `#header`
   - [x] Added a log file for pipeline crashes
   - [x] Added observing time, and number of good candidates to `frb_dashboard.py`
+  - [x] Work on making the pipeline run in real time
+        - [x] Modify storage location of `.fil` files from `/date` to `/date/>bandname<` for runnning the pipeline in real time
+                - [x] Modify `frb_dashboard.py` for the new file organization
+        - [x] Make a `good` dir to hold all the good `.h5` and `.png` files located at `/date/good`
+- [x] Figure out what causes the pipeline to crash, and adjust the number of CPU cores as needed 
+        - [x] `dashboard.py` was using all the CPUS... fixed
+        - [x] Limit GPU to one call of `fetch`
+        - Good CPU limit seems around 12 per band?, No noticable increase after this
+        - Still crashes, L1 and L2 recording seems unstable
+
+
 
 
   ### In Progress:
@@ -107,16 +126,24 @@ The Big Picture of my project is to learn & apply radio astronomy techniques for
 	- `fitburst` has a cool `simulate_burst.py` script that can simulate dedispersed or dispersed dynamic spectrums
 	- [will](https://github.com/josephwkania/will/tree/master) is a simulator that can be used to inject (and extract!) simulated pulses into `.fil` files!
         - [ ] Struggling on controlling the amplitude (SNR) of the injected signal, talked to Dirk who offered advice but haven't worked on this in a while  
- - [x] Work on making the pipeline run in real time
-	- [x] Modify storage location of `.fil` files from `/date` to `/date/>bandname<` for runnning the pipeline in real time
-		- [x] Modify `frb_dashboard.py` for the new file organization
-        - [x] Make a `good` dir to hold all the good `.h5` and `.png` files located at `/date/good`
-	- [ ] Figure out what causes the pipeline to crash, and adjust the number of CPU cores as needed 
 - [x] record raw voltages
 	- [x] Understand how to record raw voltages aka baseband data
-	- [x] wrote function to slice a small chunk of data into a new file for a candidate 
-	- [ ] write a function to convert arrival times for different frequency bands based on the DM
-	- [ ] write function to loop through candidates, and then delete the big baseband files	
+	- [x] Wrote function to slice a small chunk of data into a new file for a candidate 
+	- [x] Write a function to convert arrival times for different frequency bands based on the DM
+	- [x] Write function to loop through candidates, and then delete the big baseband files
+        - [x] Implement into pipeline
+	- [x] Added storage on ram disk to `frb_dashboard.py`
+	- [ ] Test
+  - [ ] Read how the `single_pulse_search` works in `presto`, and how it determines the SNR
+        - How it determines SNR
+        - what time it uses for the time of the candidate (center, top of band)
+        - How many, and what size time boxcars in the search
+
+- [x] Analysis of the Crab Pulsar (see [Crab analysis](https://github.com/afinemax/Astron_2024/tree/main/crab_analysis):
+	- Make plots of SNR, Fluence, $E_{\nu}$ for the crab over many hours of observations
+	- Compare to 2019, 2024 Crab paper, and Nature Paper
+	- Addtionaly make some stastical plots of the Crab in the different Bands
+	
  
   ### To Do: 
   - [ ] Write documenation for pipelines, new flowcharts
@@ -129,16 +156,14 @@ The Big Picture of my project is to learn & apply radio astronomy techniques for
 	- [ ] maybe make the pngs nan out detected RFI  
   - [ ] Make a script to make `.h5` files with full resolution for a good fetch candidate.
   - [ ] Injection testing the pipeline.
-  - [ ] Make a script that can looks for detection parameters of other radio telescopes over the same time we were observing 
   - [ ] Test the pipeline on Crab or Pulsar and compare the number of recovered vs. missed bursts.
   	- This would be a good test for our clustering methodology as well. 
   - [ ] Combine data with other telescopes to measure fringes/localization.
   - [ ] Maybe make a docker container version of the pipeline.
   - [ ] Read more FRB papers.
-  - [ ] Read how the `single_pulse_search` works in `presto`, and how it determines the SNR
   - [ ] Make nicely formatted documentation for the pipeline. 
   - [ ] Understand what happens when intra-channel Dispersion is dominate. 
-  - [ ] Understand how our FRB search and CHIME's differ.
+  - [ ] Understand how our FRB search and CHIME's differ, IE with many antennas .
   - [ ] Make 'hip' popular science videos on reserach.
   - [ ] Understand Red vs White Noise.
 </details>
