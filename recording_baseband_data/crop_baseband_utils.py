@@ -82,8 +82,7 @@ def get_number_of_samples_from_sigmf(filepath, sample_dtype=np.complex64, file_e
     num_samples = file_size // sample_size
     return num_samples
 
-
-def delta_t(DM, freq1, freq2, time1, time2, constant=4.15):
+def delta_t(DM, freq1, freq2, time1, time2, constant=4.149e-3):
     """
     Calculates the time delay between two frequencies due to dispersion.
 
@@ -93,7 +92,7 @@ def delta_t(DM, freq1, freq2, time1, time2, constant=4.15):
     freq2 (float): Second frequency in GHz.
     time1 (float): Time at first frequency (not used in calculation).
     time2 (float): Time at second frequency (not used in calculation).
-    constant (float, optional): Constant used in the dispersion formula, defaults to 4.15.
+    constant (float, optional): Constant used in the dispersion formula, defaults to 4.149e-3
 
     Returns:
     float: Arrival Time delay in seconds between the freq1 and freq2.
@@ -101,7 +100,7 @@ def delta_t(DM, freq1, freq2, time1, time2, constant=4.15):
     DM = float(DM)
 
     delta_t = constant*DM* ((1/freq1)**2 - (1/freq2)**2) 
-    return delta_t # seconds
+    print(f'Correction in seconds: {delta_t}')
 
 
 def mjd_from_iso(iso_time):
@@ -134,7 +133,7 @@ def compute_time_offset(sigmf_file1, sigmf_file2, dm, time_candidate, ram_data_d
     # Compute the time offset due to dispersion measure
     freq1 = center_freq1 * 1e-3  # Convert MHz to GHz
     freq2 = center_freq2 * 1e-3  # Convert MHz to GHz
-    time_offset = delta_t(dm, center_freq1, center_freq2, start_time1, start_time2, constant=4.15)
+    time_offset = delta_t(dm, center_freq1, center_freq2, start_time1, start_time2,)
     
     # Convert the start times to MJD
     mjd_start1 = mjd_from_iso(start_time1)
