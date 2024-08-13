@@ -73,3 +73,9 @@
 
 `ls *.singlepulse | wc -l > file.txt`
 - this would first, list out all the files that match `*.singlepulse`, and then count all of the lines in all the files and write the number to `file.txt`
+
+### Saving `.fil` headers
+`make_readfiles.py FRB*.fil` 
+
+### Presto on mercurius 
+`~/psrsoft/bin/psrsoft-shell`
