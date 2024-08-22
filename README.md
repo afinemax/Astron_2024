@@ -42,7 +42,7 @@ The Big Picture of my project is to learn & apply radio astronomy techniques for
 * [presto_with_docker](https://github.com/afinemax/Astron_2024/tree/main/running_presto_with_docker), contains a notebook for running, and executing presto commands - with presto running in a docker container 
 * [recording_baseband_data](https://github.com/afinemax/Astron_2024/tree/main/recording_baseband_data), contains a notebook for trying to record baseband data, take slices for good candidates, and slices for good candidates in other bands
 * [Crab analysis](https://github.com/afinemax/Astron_2024/tree/main/crab_analysis), contains notebooks, and work for analysing the pulses from the crab
-* [Final Presentation Slides](https://github.com/afinemax/Astron_2024/blob/main/astron_2024_frb_presentation_1.pdf
+* [Final Presentation Slides](https://github.com/afinemax/Astron_2024/blob/main/astron_2024_frb_presentation_1.pdf)
  
 ### Data Releases:
 * If you want any data, just contact me
