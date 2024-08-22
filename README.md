@@ -1,9 +1,11 @@
-# Hunting for Fast Radio Bursts (FRBs) with the 25-m Dwingeloo Radio Telescope (DRT) at ASTRON, the Netherlands 🇳🇱 📡
+# Utilizing the 25m Dwingeloo Radio Telescope (DRT) to Study Fast Radio Bursts (FRBs) at ASTRON, the Netherlands 🇳🇱 📡
 ## Advisors: Dr. Tammo Jan Dijkema & Co-advisor Proffesor Jason Hessels
 
 > "We look to the stars, but all we find is RFI." - Found on the back of a poster at ASTRON
 
-Over summer 2024, I am a researcher at The Netherlands Institute for Radio Astronomy (ASTRON) with their Summer Research Programme. For my project, I am using and operating the 25-m Dwingeloo radio telescope. I am studing bright repeating Fast Radio Bursts (FRBs) to understand the potential connections between repeating and apparently non-repeating FRBs. As FRBs are hard to catch, I will also observe pulsars to both test the methodology and learn the relevant techniques.
+### This github repo is no longer active, for updates about the pipeline see the [gitlab repo](https://gitlab.camras.nl/dijkema/frbscripts) 
+
+Over summer 2024, I was a researcher at The Netherlands Institute for Radio Astronomy (ASTRON) with their Summer Research Programme. For my project, I was using and operating the 25-m Dwingeloo radio telescope. I am studing bright repeating Fast Radio Bursts (FRBs) to understand the potential connections between repeating and apparently non-repeating FRBs. As FRBs are hard to catch, I will also observe pulsars to both test the methodology and learn the relevant techniques.
 
 This is me inside the control room, observing with the 25-m Dwingeloo Radio Telescope, and this is a diagnostic plot showing the dynamic spectrum, and some meta data of a possible detection of FRB20240209A I observed on June 26 2024.
 <table>
@@ -23,6 +25,10 @@ This is me inside the control room, observing with the 25-m Dwingeloo Radio Tele
 
 The Big Picture of my project is to learn & apply radio astronomy techniques for detecting FRBs. This entails understanding how the radio telescope turns radio signals into 'raw' data (in our case voltages), and then how the 'raw' data is further reduced by a data pipeline. The data pipeline searchs for and cuts out Radio Frequency Interference (RFI), and searchs for possible extragalactic radio signals, at present this is done with the `presto` package.  Part of the Big Idea is to make a series of minor to moderate (or even major) improvements to the search pipeline. If I am very lucky, we will be able to detect a Repeating FRB over summer. However, in the more likely case we will be looking at a bright Pulsar to test as a final 'proof of concept' that the DRT can be used in dedicated campaigns to observe bright repeating FRBs.     
 
+### Final Presentation:
+[![YouTube Video](https://img.youtube.com/vi/MA0wCurdQSo/0.jpg)](https://www.youtube.com/watch?v=MA0wCurdQSo&t=1s)
+
+
 ### Table of Contents:
 * [reading material](https://github.com/afinemax/Astron_2024/tree/main/important_docs_and_papers)
 * [ref sheet of usefull cmds](https://github.com/afinemax/Astron_2024/blob/main/ref_cmds.md)
@@ -37,7 +43,8 @@ The Big Picture of my project is to learn & apply radio astronomy techniques for
 * [presto_with_docker](https://github.com/afinemax/Astron_2024/tree/main/running_presto_with_docker), contains a notebook for running, and executing presto commands - with presto running in a docker container 
 * [recording_baseband_data](https://github.com/afinemax/Astron_2024/tree/main/recording_baseband_data), contains a notebook for trying to record baseband data, take slices for good candidates, and slices for good candidates in other bands
 * [Crab analysis](https://github.com/afinemax/Astron_2024/tree/main/crab_analysis), contains notebooks, and work for analysing the pulses from the crab
-
+* [Final Presentation Slides](https://github.com/afinemax/Astron_2024/blob/main/astron_2024_frb_presentation_1.pdf
+ 
 ### Data Releases:
 * If you want any data, just contact me
 * [Crab giant pulse detected with the Dwingeloo radio telescope on 2024-07-30](https://zenodo.org/records/13143544)
@@ -47,9 +54,6 @@ The Big Picture of my project is to learn & apply radio astronomy techniques for
 ### Observing (FRBs)
 <details>
   <summary><strong>Details:</strong></summary>
-
-
-### Currently Observing:
 
 ####  FRB20240619D:
 - See [ATel #16690, detected by MeerKat](https://www.astronomerstelegram.org/?read=16690) and [ATel #16732, detected by Westerbork](https://www.astronomerstelegram.org/?read=16732)
@@ -64,8 +68,6 @@ The Big Picture of my project is to learn & apply radio astronomy techniques for
 - Expected DM: 351 (pc/cm^3)
 - Expected Ra, Dec: 354.58, 32.38
 
-
-### Previosuly Observing:
 
 #### FRB20240209A:
 
@@ -121,14 +123,7 @@ The Big Picture of my project is to learn & apply radio astronomy techniques for
         - [x] Limit GPU to one call of `fetch`
         - Good CPU limit seems around 12 per band?, No noticable increase after this
         - Still crashes, L1 and L2 recording seems unstable
-
-
-
-
-  ### In Progress:
-  - [ ] Implement [TransientX](https://github.com/ypmen/TransientX) into the pipeline.
-	- Waiting for it to be installed on Uranus.
-  - [ ] Double Check `if` statments for `--ignorechan` option in `check_frb.py` 
+  - [x] Double Check `if` statments for `--ignorechan` option in `check_frb.py` 
   - [x] Look into making simulated, injecting simulations into `.fil` files for testing.
 	- `fitburst` has a cool `simulate_burst.py` script that can simulate dedispersed or dispersed dynamic spectrums
 	- [will](https://github.com/josephwkania/will/tree/master) is a simulator that can be used to inject (and extract!) simulated pulses into `.fil` files!
@@ -140,10 +135,10 @@ The Big Picture of my project is to learn & apply radio astronomy techniques for
 	- [x] Write function to loop through candidates, and then delete the big baseband files
         - [x] Implement into pipeline
 	- [x] Added storage on ram disk to `frb_dashboard.py`
-	- [ ] Test
-  - [ ] Read how the `single_pulse_search` works in `presto`, and how it determines the SNR
+	- [x] Test
+  - [x] Read how the `single_pulse_search` works in `presto`, and how it determines the SNR
         - How it determines SNR
-        - what time it uses for the time of the candidate (center, top of band)
+        - what time it uses for the time of the candidate (it is topocentric, top of band)
         - How many, and what size time boxcars in the search
 
 - [x] Analysis of the Crab Pulsar (see [Crab analysis](https://github.com/afinemax/Astron_2024/tree/main/crab_analysis):
@@ -153,6 +148,9 @@ The Big Picture of my project is to learn & apply radio astronomy techniques for
 	
  
   ### To Do: 
+  - [ ]Implement [TransientX](https://github.com/ypmen/TransientX) into the pipeline.
+        - Waiting for it to be installed on Uranus.
+
   - [ ] Write documenation for pipelines, new flowcharts
   - [ ] Understand what Paul and Tammo did to have the data record on Uranus
   - [ ] write an introduction section on `FRBS`, the DRT, and our observational parameters (bandwidth, devices, data points per second etc)
@@ -171,7 +169,7 @@ The Big Picture of my project is to learn & apply radio astronomy techniques for
   - [ ] Make nicely formatted documentation for the pipeline. 
   - [ ] Understand what happens when intra-channel Dispersion is dominate. 
   - [ ] Understand how our FRB search and CHIME's differ, IE with many antennas .
-  - [ ] Make 'hip' popular science videos on reserach.
+  - [ ] Make 'hip' popular science videos on research
   - [ ] Understand Red vs White Noise.
 </details>
 
