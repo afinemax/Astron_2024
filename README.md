@@ -1,6 +1,6 @@
 # Utilizing the 25m Dwingeloo Radio Telescope (DRT) to Study Fast Radio Bursts (FRBs) at ASTRON, the Netherlands 🇳🇱 📡
 ## Advisors: Dr. Tammo Jan Dijkema & Co-advisor Proffesor Jason Hessels
-### This github repo is no longer active, for updates about the pipeline see the [gitlab repo]((https://gitlab.camras.nl/dijkema/frbscripts)
+### This github repo is no longer active, for updates about the pipeline see the [gitlab repo](https://gitlab.camras.nl/dijkema/frbscripts)
 
 > "We look to the stars, but all we find is RFI." - Found on the back of a poster at ASTRON
 
@@ -80,17 +80,20 @@ The Big Picture of my project is to learn & apply radio astronomy techniques for
 ### Suggestions For Future Work:
 - Have the camras mastodon bot post "good" candidates from fetch
 	- Send as an email to myself, and Tammo, others as well 
-- Add a poster outside of the Camras Telescope to include its FRB research 
+- Add a poster outside of the Camras Telescope to include its FRB research (With a QR code to an engaging video!)
 - Try 3d DBscan clustering, taking into account the brightness of the detection (right now its time, and DM)
+	- Probably not a substaintial improvement
 - Try out Transientx over PRESTO for the pipeline for speed 
 - Have Desktop application to click to start program on Mercurius for ease of use 
-- Auto stop when storage has less then 20 gb left 
+- Auto stop when storage has less then 20Gb left 
 - update FRB.cat file to be in `.key` format 
 - Write a comprehensive observation log, including durations, headers, and clustering info 
 - When there is a 'hyper-active' FRB, have a camras team try to take many hours of data - I will commute from Amsterdam for this. 
+	- Maybe make a post asking for extra volunteers 
+- Inject Simulations into `.fil` files to test how many FRBs the pipeline recovers
+	- Concern that bright FRB's might be marked as RFI, see unexpectedly low Crab pulses in the bottom right of [this plot](https://github.com/afinemax/Astron_2024/blob/main/crab_analysis/cumulative_snr.png)
 
 ### TODO list:
-
 <details>
   <summary><strong>Tasks:</strong></summary>
 
