@@ -1,9 +1,8 @@
 # Utilizing the 25m Dwingeloo Radio Telescope (DRT) to Study Fast Radio Bursts (FRBs) at ASTRON, the Netherlands 🇳🇱 📡
 ## Advisors: Dr. Tammo Jan Dijkema & Co-advisor Proffesor Jason Hessels
+### This github repo is no longer active, for updates about the pipeline see the [gitlab repo]((https://gitlab.camras.nl/dijkema/frbscripts)
 
 > "We look to the stars, but all we find is RFI." - Found on the back of a poster at ASTRON
-
-### This github repo is no longer active, for updates about the pipeline see the [gitlab repo](https://gitlab.camras.nl/dijkema/frbscripts) 
 
 Over summer 2024, I was a researcher at The Netherlands Institute for Radio Astronomy (ASTRON) with their Summer Research Programme. For my project, I was using and operating the 25-m Dwingeloo radio telescope. I am studing bright repeating Fast Radio Bursts (FRBs) to understand the potential connections between repeating and apparently non-repeating FRBs. As FRBs are hard to catch, I will also observe pulsars to both test the methodology and learn the relevant techniques.
 
@@ -50,7 +49,6 @@ The Big Picture of my project is to learn & apply radio astronomy techniques for
 * [Crab giant pulse detected with the Dwingeloo radio telescope on 2024-07-30](https://zenodo.org/records/13143544)
 
 
-
 ### Observing (FRBs)
 <details>
   <summary><strong>Details:</strong></summary>
@@ -76,10 +74,20 @@ The Big Picture of my project is to learn & apply radio astronomy techniques for
 - Expected RA, Dec: 289.91, 86.06 (deg)
 - Observing Cadence: Typically ~07:00-10:00, 11:00-15:00 (UTC) Monday to Friday (I have to be physically in the telescope
 - Total of around 200 hours on target. Stopped observing around the 16th of July.
-
-
-
 </details>
+
+
+### Suggestions For Future Work:
+- Have the camras mastodon bot post "good" candidates from fetch
+	- Send as an email to myself, and Tammo, others as well 
+- Add a poster outside of the Camras Telescope to include its FRB research 
+- Try 3d DBscan clustering, taking into account the brightness of the detection (right now its time, and DM)
+- Try out Transientx over PRESTO for the pipeline for speed 
+- Have Desktop application to click to start program on Mercurius for ease of use 
+- Auto stop when storage has less then 20 gb left 
+- update FRB.cat file to be in `.key` format 
+- Write a comprehensive observation log, including durations, headers, and clustering info 
+- When there is a 'hyper-active' FRB, have a camras team try to take many hours of data - I will commute from Amsterdam for this. 
 
 ### TODO list:
 
