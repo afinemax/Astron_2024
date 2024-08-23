@@ -1,4 +1,4 @@
-# Observing FRBs
+# Observing FRBS Procedure
 
 Created by Tammo Jan, 2024-03-20
 
@@ -8,7 +8,7 @@ Maxwell Fine, 2024-08-23
 
 Connect the 23cm connection from the antenna panel (labeled '3') to the X310 via the top left connection in the rack. Turn on the X310, located at the top of the Faraday cage.
 
-### SSH into Uranus:
+## SSH into Uranus:
 
 **NOTE** - you need a personal camras account to get into uranus, contact ict if you don't have one.
 
@@ -16,7 +16,7 @@ Become the frb user on Uranus: run ```sudo -u frb -i```
 
 This account on Uranus has all of the observation scripts loaded into the path. 
 
-## Point to the Telescope to the FRB you want to observe:
+## Point the Telescope to the FRB you want to observe:
 Now point the telescope to the FRB you want to observe:
 
 Run: 
