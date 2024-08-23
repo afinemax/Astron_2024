@@ -1,6 +1,6 @@
 # Observing FRBs
 
-Tammo Jan, 2024-03-20
+Created by Tammo Jan, 2024-03-20
 
 Maxwell Fine, 2024-08-23
 
@@ -8,21 +8,19 @@ Maxwell Fine, 2024-08-23
 
 Connect the 23cm connection from the antenna panel (labeled '3') to the X310 via the top left connection in the rack. Turn on the X310, located at the top of the Faraday cage.
 
-## Load FRB scripts into the Path:
-On Mercurius
+### SSH into Uranus
 
-Open a "Terminal" session, by right clicking and then selecting the terminal. 
+**NOTE** - you need a personal camras account to get into uranus, contact ict if you don't have one.
 
-Load the correct scripts by running:
-```export PATH=~/frb:$PATH```
+Become the frb user on Uranus: run ```sudo -u frb -i``` 
 
-
+This account on Uranus has all of the observation scripts loaded into the path. 
 
 ## Point to the Telescope to the FRB you want to observe:
 Now point the telescope to the FRB you want to observe:
 
 Run: 
-``` cat ~/frb/frb.cat```
+``` cat /home_local/frb/git/frbscripts/frb.cat```
 
 This will print out the FRB catalog on the telescope, the output should look something like this. Pick an FRB and move the telescope.  
 
@@ -80,3 +78,5 @@ After you have stopped the observation:
 * Reconnect the antenna to the astronomy panel, i.e., connect antenna port 3 to the port below labeled '23cm'.
 
 
+## Data Management:
+If the space on `/data` is low message Tammo, and Max. We do not automaticaly delete files. 
