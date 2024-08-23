@@ -8,7 +8,7 @@ Maxwell Fine, 2024-08-23
 
 Connect the 23cm connection from the antenna panel (labeled '3') to the X310 via the top left connection in the rack. Turn on the X310, located at the top of the Faraday cage.
 
-### SSH into Uranus
+### SSH into Uranus:
 
 **NOTE** - you need a personal camras account to get into uranus, contact ict if you don't have one.
 
@@ -50,10 +50,14 @@ It also starts a dashboard, which runs in the terminal. Be sure that the termina
 ![FRB Dashboard](https://github.com/afinemax/Astron_2024/raw/main/frb_dashboard.png)
 
 
+This is what the dashboard looks like when running. Note this is for an observation of the Crab Pulsar - FRBs are much harder to detect. 
+
 The Dashboard displays usefull information during the observation. 
 - space on `/data`, **this number is important to watch. Stop Observing when this is low (less then 20)**
 - When the `.fil` files are green - we are recording data!
-	- We record the data in chunks of 10 minutes 
+	- We record the data in chunks of 10 minutes
+	- Every 10 minutes or so you will see `check_frb` sessions running
+- space on `/data_tmp`, this is where the baseband data is recorded. It is deleted if no "good" candidates are made  
 - If the pipeline produces a "good" candidate, it's Signal-To-Noise Ratio (SNR) is displayed. This tells us how bright the detection is. 
 
 You can also start the dashboard by running ```frb_dashboard.py```
