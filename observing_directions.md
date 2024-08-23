@@ -56,15 +56,14 @@ The Dashboard displays usefull information during the observation.
 - space on `/data`, **this number is important to watch. Stop Observing when this is low (less then 20)**
 - When the `.fil` files are green - we are recording data!
 	- We record the data in chunks of 10 minutes 
-
-If the pipeline produces a "good" candidate, it's Signal-To-Noise Ratio (SNR) is displayed. This tells us how bright the detection is. 
+- If the pipeline produces a "good" candidate, it's Signal-To-Noise Ratio (SNR) is displayed. This tells us how bright the detection is. 
 
 You can also start the dashboard by running ```frb_dashboard.py```
 
 
 
 ## If you make a "good" detection:
-Continue Observing! Notify Tammo & Max. 
+Continue Observing! Notify Tammo & Max. This is not a confirmed FRB - it is still a candidate and needs human review.  
  
 
 ## Stopping Observations:
