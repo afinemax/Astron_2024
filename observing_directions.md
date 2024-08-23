@@ -54,11 +54,10 @@ It also starts a dashboard, which runs in the terminal. Be sure that the termina
 
 The Dashboard displays usefull information during the observation. 
 - space on `/data`, **this number is important to watch. Stop Observing when this is low (less then 20)**
-- space on `/data_tmp`
+- When the `.fil` files are green - we are recording data!
+	- We record the data in chunks of 10 minutes 
 
-When the most recent `.fil` files are green, that means we are recording data!
-
-If the pipeline produces a "good" candidate", it's Signal-To-Noise Ratio (SNR) is displayed. This tells us how bright the detection is. 
+If the pipeline produces a "good" candidate, it's Signal-To-Noise Ratio (SNR) is displayed. This tells us how bright the detection is. 
 
 You can also start the dashboard by running ```frb_dashboard.py```
 
