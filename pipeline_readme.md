@@ -4,7 +4,7 @@ For instructions on how to use this pipeline for FRB detection, refer to the [Ob
 
 ## Data Management
 
-Observation logs are stored in `/data/frb/obs_logs{source_name}`. We retain `.fil` files for a few days in case another telescope detects an FRB. Before deleting a day's worth of data, ensure to check `/data/frb/{date}/good` for any unreported detections.
+Observation logs are stored in `/data/frb/obs_logs{source_name}`. Retain the `.fil` files for a few days in case another telescope detects an FRB. Before deleting a day's worth of data, ensure to check `/data/frb/{date}/good` for any unreported detections.
 
 ## Overview
 
@@ -63,20 +63,22 @@ Refer to the [Presto Tutorial](https://github.com/afinemax/Astron_2024/blob/main
 
 ### Sorting with Fetch
 
-`fetch` uses machine learning to classify candidates as "good" or "bad". It ensures only one instance runs at a time using a lockfile, moves the files accordingly, and saves baseband data along with diagnostic plots. Located in the `run_predict_and_move` function.
+`fetch` uses machine learning to classify candidates as "good" or "bad". It ensures only one instance runs at a time using a lockfile, moves the files accordingly, and saves baseband data along with diagnostic plots. Located in the `run_predict_and_move` function using a lock file.
 
 ### Saving Baseband Data
 
-Located in the `run_predict_and_move` function, baseband data is saved if "good" candidates are found by `fetch`. It saves 2 seconds of data centered on the candidate and attempts to save corresponding data in other bands.
+Located in the `run_predict_and_move` function, baseband data is saved if "good" candidates are found by `fetch`. It saves 2 seconds of data centered on the candidate and attempts to save corresponding data in other bands. Saved in `.sigmf` format. 
 
 ### Diagnostic Plotting
 
-After saving baseband data, diagnostic `.png` files are generated for "good"  `.h5` candidates.
+After saving baseband data, diagnostic `.png` files are generated for "good"  `.h5` candidates. Baseband data, good candidate files, and diagnostic plots are located in `/data/frb/{date}/good`
 
 ### Logging
 
 Logs are written after DBscan clustering to `/data/frb/obs_log/{source_name}`. The logs include details about the number of candidates before and after clustering, along with other relevant information.
+
 	- `#Filterbank_File", "User", "Timestamp", "RFI_Instances", "Pulse_Candidates", "Clusters_(Candidates_after_clustering)", "silhouette_score", "duration_seconds"
+
 	- `.fil` file headers are recorded here
 
 ## `stop_frb.sh`
@@ -86,20 +88,23 @@ This script ends the program, terminating all top-level `screen` sessions initia
 ## Suggestions for Future Improvement
 
 - Automate posting "good" candidates from fetch to the Camras Mastodon bot.
-- Update the FRB.cat file to `.key` format.
+- Update the `frb.cat` file to `.key` format.
+- Try out interferometry using baseband data of the Crab. (Before a real FRB).
 - Improve DBscan clustering by considering detection brightness. (IE 3D)
-- Experiment with Transientx over PRESTO for faster pipeline processing.
+- Experiment with `Transientx` over `PRESTO` for faster pipeline processing.
 - Make a desktop application for easier program initiation on Mercurius.
-- Implement automatic shutdown when storage on `/data/frb` is below 20GB.
+- Implement automatic shutdown when storage on `/data/frb` is below 20GB. Run this in a screen session.
 - Add a poster outside the telescope.
-- Test pipeline efficacy with simulated FRB injections into `.fil` files.
-- Investigate potential misclassification of bright FRBs as RFI. See [this plot](https://github.com/afinemax/Astron_2024/blob/main/crab_analysis/cumulative_snr.png)
+- Test pipeline with simulated FRBs injectioned into `.fil` files.
+- Investigate potential misclassification of bright FRBs as RFI. See [this plot](https://github.com/afinemax/Astron_2024/blob/main/crab_analysis/cumulative_snr.png) where there are missing high SNR detections. 
 
 ## Known Issues & Limitations
 
 - Baseband data and their associated `screen` sessions are not terminated when the program ends.
 - Observing past midnight does not automatically create a new `/data/frb/{date}` directory.
 - `.fil` file names use local time instead of UCT, although headers are correct.
+- Recording of `.fil` for L-Bands occasionally crashes 
+- Currently the pipeline is limited by the abililty to write `.fil` and baseband files
 
 ## Installation
 

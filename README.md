@@ -6,14 +6,14 @@
 
 Over summer 2024, I was a researcher at The Netherlands Institute for Radio Astronomy (ASTRON) with their Summer Research Programme. For my project, I was using and operating the 25-m Dwingeloo radio telescope. I am studing bright repeating Fast Radio Bursts (FRBs) to understand the potential connections between repeating and apparently non-repeating FRBs. As FRBs are hard to catch, I will also observe pulsars to both test the methodology and learn the relevant techniques.
 
-This is me inside the control room, observing with the 25-m Dwingeloo Radio Telescope, and this is a diagnostic plot showing the dynamic spectrum, and some meta data of a possible detection of FRB20240209A I observed on June 26 2024.
+This is me inside the control room, observing with the 25-m Dwingeloo Radio Telescope, and this is my confirmed detection of FRB20240619D.
 <table>
   <tr>
     <td style="text-align: center;">
       <img src="https://afinemax.github.io/afinemax1/images/max_25m_1.jpg" alt="Max Fine Observing with the 25-m Dwingeloo Radio Telescope" width="500">
     </td>
     <td style="text-align: center;">
-      <img src="https://afinemax.github.io/afinemax1/images/FRB20240209A_L1_Band_2024_06_26_10_33_18_tcand_297.8789500_dm_183.0_snr_6.1bandpass_corr.png" alt="Diagnostic Plot of a possible detection of FRB20240209A Observed on June 26 2024 by Max Fine" width="500">
+      <img src="https://github.com/afinemax/Astron_2024/tree/main/frb_analysis/FRB20240619D_drt_maxfine_2014-08-17.png" alt="" width="500">
     </td>
   </tr>
 </table>
@@ -42,6 +42,7 @@ The Big Picture of my project is to learn & apply radio astronomy techniques for
 * [presto_with_docker](https://github.com/afinemax/Astron_2024/tree/main/running_presto_with_docker), contains a notebook for running, and executing presto commands - with presto running in a docker container 
 * [recording_baseband_data](https://github.com/afinemax/Astron_2024/tree/main/recording_baseband_data), contains a notebook for trying to record baseband data, take slices for good candidates, and slices for good candidates in other bands
 * [Crab analysis](https://github.com/afinemax/Astron_2024/tree/main/crab_analysis), contains notebooks, and work for analysing the pulses from the crab
+* [FRB analysis](https://github.com/afinemax/Astron_2024/tree/main/frb_analysis), contains a plotting notebook for my FRB detection. It also has python functions for dedispersing and bandwidth correction 
 * [Final Presentation Slides](https://github.com/afinemax/Astron_2024/blob/main/astron_2024_frb_presentation_1.pdf)
  
 ### Data Releases:
@@ -58,7 +59,7 @@ The Big Picture of my project is to learn & apply radio astronomy techniques for
 - Expected DM: 465 (pc/cm^3)
 - Expected Ra, Dec: 297.37, -25.21 (deg)
 - We have limited observation time, typically its up ~23:00 - 04:00, I have to be physically in the telescope to take data...
-- I have done a few nights, but no luck yet :((
+- I have made a postive detection! No Baseband data was recorded due to high RFI
 
 
 #### FRB20240316A

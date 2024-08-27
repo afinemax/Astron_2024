@@ -2,7 +2,7 @@
 
 Created by Tammo Jan, 2024-03-20
 
-Maxwell Fine, 2024-08-23
+Updated by Maxwell Fine, 2024-08-23
 
 ## Setup:
 
@@ -17,8 +17,6 @@ Become the frb user on Uranus: run ```sudo -u frb -i```
 This account on Uranus has all of the observation scripts loaded into the path. 
 
 ## Point the Telescope to the FRB you want to observe:
-Now point the telescope to the FRB you want to observe:
-
 Run: 
 ``` cat /home_local/frb/git/frbscripts/frb.cat```
 
@@ -30,6 +28,8 @@ This will print out the FRB catalog on the telescope, the output should look som
 | FRB20201124A | 411         | 77.01    | 26.06     |
 | FRB20220912A | 219         | 347.27   | 48.71     |
 
+
+Now point the telescope to the FRB you want to observe. Check the elevation of the source - reconmend to stop observing when it is less than 5 degrees. 
 
 
 
@@ -57,7 +57,7 @@ The Dashboard displays usefull information during the observation.
 - When the `.fil` files are green - we are recording data!
 	- We record the data in chunks of 10 minutes
 	- Every 10 minutes or so you will see `check_frb` sessions running
-- space on `/data_tmp`, this is where the baseband data is recorded. It is deleted if no "good" candidates are made  
+- space on `/data_tmp`, this is where the baseband data is recorded. It is automatically deleted if no "good" candidates are made.   
 - If the pipeline produces a "good" candidate, it's Signal-To-Noise Ratio (SNR) is displayed. This tells us how bright the detection is. 
 
 You can also start the dashboard by running ```frb_dashboard.py```
@@ -65,7 +65,7 @@ You can also start the dashboard by running ```frb_dashboard.py```
 
 
 ## If you make a "good" detection:
-Continue Observing! Notify Tammo & Max. This is not a confirmed FRB - it is still a candidate and needs human review.  
+Continue Observing! Notify Tammo & Max. This is not a confirmed FRB - it is still a candidate and needs human review.  "good" detections produce diagnotic plots located at `/data/frb/{date}/good`.
  
 
 ## Stopping Observations:
