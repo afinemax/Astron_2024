@@ -13,7 +13,7 @@ This is me inside the control room, observing with the 25-m Dwingeloo Radio Tele
       <img src="https://afinemax.github.io/afinemax1/images/max_25m_1.jpg" alt="Max Fine Observing with the 25-m Dwingeloo Radio Telescope" width="500">
     </td>
     <td style="text-align: center;">
-      <img src="https://github.com/afinemax/Astron_2024/tree/main/frb_analysis/FRB20240619D_drt_maxfine_2014-08-17.png"width="500">
+      <img src="https://raw.githubusercontent.com/afinemax/Astron_2024/main/frb_analysis/FRB20240619D_drt_maxfine_2014-08-17.png"width="500">
     </td>
   </tr>
 </table>
